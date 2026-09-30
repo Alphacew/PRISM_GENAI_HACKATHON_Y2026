@@ -42,5 +42,9 @@ htmlcov/
 *.log
 reports/*.log
 
+# Office / editor lock & temp files
+.~lock.*#
+*~
+
 # Transient archives
 dist-forge-prism.zip
