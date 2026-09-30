@@ -296,3 +296,14 @@ AI coding assistants were used during development. The full declaration, per
 feature, is in `docs/AI_DISCLOSURE.md`. The shipped system makes no model calls
 at serve time: `meta.model` is `none(rules)` and `cost_usd` is `0.0` on every
 response, which is verifiable from the response body itself.
+
+---
+
+## Team & Contributors
+
+**Team SRM_Carrot** · SRM Institute of Science and Technology
+
+- **Vijval Parakkat** ([@Alphacew](https://github.com/Alphacew)) — Team Lead & Engine Architecture
+- **Aaron Anish Thadathil** — Presentation & Research
+- **Rishi Pradeep** ([@rishipradeep-stack](https://github.com/rishipradeep-stack)) — Web & Integration
+
