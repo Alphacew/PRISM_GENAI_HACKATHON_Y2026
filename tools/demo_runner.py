@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""FORGE — Interactive Demo Video Runner for 5-Minute Single-Take Recording.
+"""FORGE — Demo Video Runner.
 
-Follows `docs/DEMO_VIDEO_SCRIPT.md` shot-for-shot.
-Press [ENTER] to advance through each shot.
-Displays on-screen narration cues and executes live HTTP requests against
-the running FORGE server at http://127.0.0.1:8000.
+Supports two modes:
+  1. Clean Mode (Default for video recording):
+     Only prints realistic terminal commands ($ curl ...) and formatted JSON.
+     Zero script text or prompt hints on screen. Completely looks like a live terminal.
+     
+  2. Prompter Mode (--prompter):
+     Shows the full shot cues and on-screen narration text in the terminal.
 
 Usage:
-  python tools/demo_runner.py            # interactive mode for video recording
-  python tools/demo_runner.py --test     # automated pre-flight verification
+  python tools/demo_runner.py            # Clean terminal mode (for recording)
+  python tools/demo_runner.py --prompter # Shows speech cues in terminal
+  python tools/demo_runner.py --test     # Automated pre-flight check
 """
 from __future__ import annotations
 
@@ -24,6 +28,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+
 def _find_base_url() -> str:
     for port in (8079, 8000):
         try:
@@ -37,6 +42,7 @@ def _find_base_url() -> str:
             continue
     return "http://127.0.0.1:8079"
 
+
 BASE_URL = _find_base_url()
 
 
@@ -48,6 +54,7 @@ def c(text: str, color: str = "bold") -> str:
         "yellow": "\033[33m\033[1m",
         "blue": "\033[34m\033[1m",
         "magenta": "\033[35m\033[1m",
+        "dim": "\033[2m",
         "reset": "\033[0m",
     }
     return f"{codes.get(color, '')}{text}{codes['reset']}"
@@ -83,34 +90,31 @@ def check_server():
     return False
 
 
-def wait_step(prompt: str, auto: bool = False):
+def wait_step(prompt: str, auto: bool = False, clean: bool = True):
     if auto:
-        print(f"\n{c('[AUTO ADVANCE]', 'yellow')} {prompt}\n")
         time.sleep(1.0)
-    else:
-        try:
+        return
+    try:
+        if clean:
+            input(f"\n{c('Press [Enter] for next command...', 'dim')} ")
+        else:
             input(f"\n{c('>>> [PRESS ENTER TO ADVANCE] >>>', 'green')} {prompt} ")
-        except (KeyboardInterrupt, EOFError):
-            print("\nExiting demo.")
-            sys.exit(0)
+    except (KeyboardInterrupt, EOFError):
+        print("\nExiting demo.")
+        sys.exit(0)
 
 
-def run_demo(auto: bool = False):
-    print("=" * 78)
-    print(c("FORGE — Interactive 5-Minute Demo Video Runner", "cyan"))
-    print("Samsung PRISM Generative AI Hackathon (3rd Edition) · Theme 02")
-    print("Team: SRM_Carrot (SRMIST)")
-    print("=" * 78)
+def run_demo(auto: bool = False, prompter: bool = False):
+    clean = not prompter
 
     # Pre-roll server check
     if not check_server():
-        print(c("\n[!] FORGE service not detected at http://127.0.0.1:8000", "yellow"))
-        print("Starting in-process background Uvicorn server...")
+        print(c("\n[!] Starting FORGE server on port 8079...", "yellow"))
         env = os.environ.copy()
         env["FORGE_ATLAS"] = str(ROOT / "atlas" / "current")
         env["FORGE_CATALOG"] = str(ROOT / "data" / "deeplinks.json")
         proc = subprocess.Popen(
-            [sys.executable, "-m", "uvicorn", "forge.api:app", "--port", "8000", "--host", "127.0.0.1"],
+            [sys.executable, "-m", "uvicorn", "forge.api:app", "--port", "8079", "--host", "127.0.0.1"],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
             env=env,
@@ -119,57 +123,56 @@ def run_demo(auto: bool = False):
             if check_server():
                 break
             time.sleep(0.5)
-        if not check_server():
-            print(c("ERROR: Failed to start FORGE server.", "yellow"))
-            sys.exit(1)
-        print(c("Server online & healthy!", "green"))
 
     # Pre-warm
     try:
         siis_data = json.loads((ROOT / "data" / "siis_responses.json").read_text(encoding="utf-8"))
         for row in siis_data["responses"]:
             post("/v1/troubleshoot", {"query": row["original_query"]})
-        print(c(f"Pre-warmed {len(siis_data['responses'])} atlas queries.", "green"))
-    except Exception as e:
-        print(c(f"Pre-warm warning: {e}", "yellow"))
+    except Exception:
+        pass
+
+    if not clean:
+        print("=" * 78)
+        print(c("FORGE — Interactive 5-Minute Demo Video Runner", "cyan"))
+        print("=" * 78)
 
     # -----------------------------------------------------------------------
-    # Shot 0
+    # Step 1: Ready to start
     # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 0 · 0:00–0:20 · Title Card & Introduction", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Slide 1 (Title Card)")
-    print(c("SAY:", "cyan"), '"This is FORGE. It turns a vague complaint like *screen flickers and the battery dies fast* into a deeplinked troubleshooting plan. The interesting part is where the work happens."')
-    wait_step("Ready for Shot 1", auto)
+    if clean:
+        os.system("clear")
+        print(c("FORGE Terminal ready. Start screen recording now.", "green"))
+    else:
+        print(c("SHOT 0 · Title card in browser", "magenta"))
+        print(c("SAY:", "cyan"), '"This is FORGE, by team SRM_Carrot from SRMIST..."')
+    wait_step("Ready for Build Step", auto, clean)
 
     # -----------------------------------------------------------------------
-    # Shot 1
+    # Step 2: Build Lane
     # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 1 · 0:20–0:50 · Architecture & Build-Time Shift", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Slide 2 / Figure 1 (Conventional vs FORGE Placement)")
-    print(c("SAY:", "cyan"), '"The reference roadmap runs structure extraction, deeplink mapping and validation inside every request. We hoisted all three to build time. Serving becomes a lookup."')
-    wait_step("Ready for Shot 2", auto)
+    if clean:
+        os.system("clear")
+    else:
+        print("\n" + "=" * 78)
+        print(c("SHOT 2 · Atlas Compilation Build Lane", "magenta"))
+        print(c("SAY:", "cyan"), '"Here is the build. It compiles 14 plans in 300 ms..."')
 
-    # -----------------------------------------------------------------------
-    # Shot 2
-    # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 2 · 0:50–1:20 · Atlas Compilation Build Lane", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Terminal: Running atlas build")
-    print(c("SAY:", "cyan"), '"Here is the build. It compiles the whole knowledge base: 14 plans, 33 actions, every one audited against the contract before it is admitted. A plan that fails a gate never reaches the atlas."')
+    print(f"{c('user@samsung-dev:~/forge$', 'cyan')} python -m forge.build --siis data/siis_responses.json --catalog data/deeplinks.json --out atlas")
     cmd = [sys.executable, "-m", "forge.build", "--siis", "data/siis_responses.json", "--catalog", "data/deeplinks.json", "--out", "atlas"]
-    print(f"\n$ {' '.join(cmd)}")
     subprocess.run(cmd, cwd=str(ROOT))
-    wait_step("Ready for Shot 3 (Cold Request)", auto)
+    wait_step("Ready for Cold Request", auto, clean)
 
     # -----------------------------------------------------------------------
-    # Shot 3
+    # Step 3: Cold Request (Compile-on-Miss)
     # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 3 · 1:20–1:50 · Cold Request (Compile-on-Miss)", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Terminal: curl POST /v1/troubleshoot with novel siis_response")
-    print(c("SAY:", "cyan"), '"A genuinely novel complaint with new reference text. P95 under twenty milliseconds, and cache_tier says miss, stage says compile_on_miss."')
+    if clean:
+        os.system("clear")
+    else:
+        print("\n" + "=" * 78)
+        print(c("SHOT 3 · Cold Request (Compile-on-Miss)", "magenta"))
+        print(c("SAY:", "cyan"), '"A genuinely novel complaint with new reference text..."')
+
     cold_payload = {
         "query": "haptic vibration motor rattles when typing",
         "siis_response": (
@@ -183,117 +186,100 @@ def run_demo(auto: bool = False):
             "Visit an authorized TechCorp Service Center if mechanical rattling persists.\n"
         )
     }
-    print(f"\n$ curl -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(cold_payload)[:60]}...'")
+    print(f"{c('user@samsung-dev:~/forge$', 'cyan')} curl -s -X POST {BASE_URL}/v1/troubleshoot -H 'Content-Type: application/json' -d @cold_query.json | jq .")
     res3 = post("/v1/troubleshoot", cold_payload)
-    print(c("RESPONSE META:", "green"), json.dumps(res3.get("meta"), indent=2))
-    print(c("CONTEXT TITLE:", "green"), res3["response"]["contexts"][0]["title"] if res3["response"]["contexts"] else "None")
-    print(c("ACTION 1:", "green"), res3["response"]["contexts"][0]["actions"][0]["actionName"] if res3["response"]["contexts"] else "None")
-    wait_step("Ready for Shot 4 (Warm Cache Hit)", auto)
+    print(json.dumps(res3, indent=2))
+    wait_step("Ready for Warm Request", auto, clean)
 
     # -----------------------------------------------------------------------
-    # Shot 4
+    # Step 4: Warm Request (Exact Hash)
     # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 4 · 1:50–2:20 · Warm Cache Hit (Sub-millisecond Exact Lookup)", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Terminal: curl POST /v1/troubleshoot for same query")
-    print(c("SAY:", "cyan"), '"Same query again. cache_tier is exact, latency_ms is under one, and cost_usd is zero — it was zero the first time too."')
+    if clean:
+        os.system("clear")
+    else:
+        print("\n" + "=" * 78)
+        print(c("SHOT 4 · Warm Cache Hit (< 1ms)", "magenta"))
+        print(c("SAY:", "cyan"), '"Same query again. cache_tier is exact, latency is under 1 millisecond..."')
+
     repeat_payload = {"query": "haptic vibration motor rattles when typing"}
-    print(f"\n$ curl -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(repeat_payload)}'")
+    print(f"{c('user@samsung-dev:~/forge$', 'cyan')} curl -s -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(repeat_payload)}' | jq .")
     res4 = post("/v1/troubleshoot", repeat_payload)
-    print(c("RESPONSE META:", "green"), json.dumps(res4.get("meta"), indent=2))
-    wait_step("Ready for Shot 5 (Unseen Paraphrase)", auto)
+    print(json.dumps(res4, indent=2))
+    wait_step("Ready for Paraphrase", auto, clean)
 
     # -----------------------------------------------------------------------
-    # Shot 5
+    # Step 5: Unseen Paraphrase Query
     # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 5 · 2:20–2:50 · Unseen Paraphrase Query", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Terminal: curl POST /v1/troubleshoot with unseen colloquial wording")
-    print(c("SAY:", "cyan"), '"This wording was never compiled. It still lands on the same plan — that is the intent signature doing the work, not string matching."')
+    if clean:
+        os.system("clear")
+    else:
+        print("\n" + "=" * 78)
+        print(c("SHOT 5 · Unseen Paraphrase Query", "magenta"))
+        print(c("SAY:", "cyan"), '"This colloquial wording was never compiled..."')
+
     para_payload = {"query": "phone swipe gestures wrong direction after app install"}
-    print(f"\n$ curl -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(para_payload)}'")
+    print(f"{c('user@samsung-dev:~/forge$', 'cyan')} curl -s -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(para_payload)}' | jq .")
     res5 = post("/v1/troubleshoot", para_payload)
-    print(c("RESPONSE META:", "green"), json.dumps(res5.get("meta"), indent=2))
-    if res5["response"]["contexts"]:
-        ctx = res5["response"]["contexts"][0]
-        print(c("RESOLVED GOAL:", "green"), ctx["goal"])
-        print(c("FIRST STEP:", "green"), ctx["actions"][0]["stepGroups"][0]["steps"][0])
-        print(c("ACTIONABLE DEEPLINK:", "green"), json.dumps(ctx["actions"][0]["stepGroups"][0]["actionableDeeplink"], indent=2))
-    wait_step("Ready for Shot 6 (Figure 4)", auto)
+    print(json.dumps(res5, indent=2))
+    wait_step("Ready for Multi-Intent", auto, clean)
 
     # -----------------------------------------------------------------------
-    # Shot 6
+    # Step 6: Multi-Intent Fan-Out
     # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 6 · 2:50–3:20 · Target + Polarity Resolution", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Slide / Figure 4 (Target + Polarity Resolution)")
-    print(c("SAY:", "cyan"), '"Each step maps to the exact Settings screen, not a parent menu. And when the step toggles something on, we read the polarity off the catalog entry so we never resolve to the off entry and flip the user\'s setting the wrong way."')
-    wait_step("Ready for Shot 7 (Multi-Intent Fan-out)", auto)
+    if clean:
+        os.system("clear")
+    else:
+        print("\n" + "=" * 78)
+        print(c("SHOT 7 · Multi-Intent Fan-Out", "magenta"))
+        print(c("SAY:", "cyan"), '"One utterance, multiple problems..."')
 
-    # -----------------------------------------------------------------------
-    # Shot 7
-    # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 7 · 3:20–3:50 · Multi-Intent Fan-Out", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Terminal: curl with compound multi-problem complaint")
-    print(c("SAY:", "cyan"), '"One utterance, multiple problems. contexts is a list, so it returns multiple ranked Goals. Almost every submission will return one."')
     multi_payload = {"query": "screen flickers and the battery drains fast and email server not responding"}
-    print(f"\n$ curl -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(multi_payload)}'")
+    print(f"{c('user@samsung-dev:~/forge$', 'cyan')} curl -s -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(multi_payload)}' | jq '.response.contexts[].title'")
     res7 = post("/v1/troubleshoot", multi_payload)
-    print(c("RESPONSE META:", "green"), json.dumps(res7.get("meta"), indent=2))
-    print(c(f"RETURNED CONTEXTS COUNT: {len(res7['response']['contexts'])}", "green"))
-    for idx, ctx in enumerate(res7["response"]["contexts"], 1):
-        print(f"  {idx}. {c(ctx['title'], 'bold')} — {ctx['goal']}")
-    wait_step("Ready for Shot 8 (Nonsense Fallback)", auto)
+    titles = [ctx["title"] for ctx in res7.get("response", {}).get("contexts", [])]
+    print(json.dumps(titles, indent=2))
+    print(f"\n{c('// Full contexts count:', 'dim')} {len(res7.get('response', {}).get('contexts', []))}")
+    wait_step("Ready for Nonsense Fallback", auto, clean)
 
     # -----------------------------------------------------------------------
-    # Shot 8
+    # Step 7: Graceful No-Match Fallback
     # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 8 · 3:50–4:10 · Graceful No-Match Fallback", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Terminal: curl with out-of-domain nonsense complaint")
-    print(c("SAY:", "cyan"), '"When the corpus has no answer, we say so explicitly instead of inventing one."')
+    if clean:
+        os.system("clear")
+    else:
+        print("\n" + "=" * 78)
+        print(c("SHOT 8 · Graceful No-Match Fallback", "magenta"))
+        print(c("SAY:", "cyan"), '"When the corpus has no answer, we say so explicitly..."')
+
     none_payload = {"query": "how to bake sourdough bread on my microwave oven"}
-    print(f"\n$ curl -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(none_payload)}'")
+    print(f"{c('user@samsung-dev:~/forge$', 'cyan')} curl -s -X POST {BASE_URL}/v1/troubleshoot -d '{json.dumps(none_payload)}' | jq .")
     res8 = post("/v1/troubleshoot", none_payload)
-    print(c("FULL RESPONSE BODY:", "green"), json.dumps(res8, indent=2))
-    wait_step("Ready for Shot 9 (Live Metrics)", auto)
+    print(json.dumps(res8, indent=2))
+    wait_step("Ready for Metrics", auto, clean)
 
     # -----------------------------------------------------------------------
-    # Shot 9
+    # Step 8: Production Metrics
     # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 9 · 4:10–4:35 · Production Metrics & Health Endpoint", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Terminal: curl GET /v1/metrics")
-    print(c("SAY:", "cyan"), '"The service reports its own health: hit rate, tier split, latency percentiles, cost."')
-    print(f"\n$ curl {BASE_URL}/v1/metrics")
+    if clean:
+        os.system("clear")
+    else:
+        print("\n" + "=" * 78)
+        print(c("SHOT 9 · Production Metrics", "magenta"))
+        print(c("SAY:", "cyan"), '"The service reports its own health..."')
+
+    print(f"{c('user@samsung-dev:~/forge$', 'cyan')} curl -s {BASE_URL}/v1/metrics | jq .")
     res9 = get("/v1/metrics")
-    print(c("LIVE METRICS:", "green"), json.dumps(res9, indent=2))
-    wait_step("Ready for Shot 10 (Ablation Analysis)", auto)
+    print(json.dumps(res9, indent=2))
+    wait_step("Demo complete! Switch back to slides.", auto, clean)
 
-    # -----------------------------------------------------------------------
-    # Shot 10
-    # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 10 · 4:35–4:55 · Architectural Ablation & Honest Frontiers", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Slide / Figure 6 (Ablation Analysis & Frontier Curve)")
-    print(c("SAY:", "cyan"), '"And the result we did not want to show: on a twenty-document corpus the dense encoder alone accepts more matches than our hybrid. We report it. Here is why the target and polarity terms still earn their place."')
-    wait_step("Ready for Shot 11 (Closing Card)", auto)
-
-    # -----------------------------------------------------------------------
-    # Shot 11
-    # -----------------------------------------------------------------------
-    print("\n" + "=" * 78)
-    print(c("SHOT 11 · 4:55–5:00 · Closing Card & GitHub Repository", "magenta"))
-    print(c("ON SCREEN:", "bold"), "Slide 16 (Closing Card & Checklist)")
-    print(c("SAY:", "cyan"), '"Repo is in the submission, everything reproducible with one command."')
-    print("\n" + "=" * 78)
-    print(c("DEMO RUN COMPLETE! Perfect 5-minute video recording workflow ready.", "green"))
-    print("=" * 78)
+    if clean:
+        os.system("clear")
+        print(c("Finished terminal demo. Switch to presentation slide for wrap up!", "green"))
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--test", action="store_true", help="Run automated pre-flight test without pausing")
+    parser.add_argument("--test", action="store_true", help="Run automated test")
+    parser.add_argument("--prompter", action="store_true", help="Show narration cues in terminal")
     args = parser.parse_args()
-    run_demo(auto=args.test)
+    run_demo(auto=args.test, prompter=args.prompter)

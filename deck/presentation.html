@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FORGE Demo Slides — Team SRM_Carrot</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    body { background: #0f1117; color: #fff; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+    .header { padding: 12px 24px; background: #1a1d27; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2d3345; }
+    .header h1 { font-size: 18px; color: #4ade80; font-weight: 600; }
+    .header .info { font-size: 14px; color: #94a3b8; }
+    .slide-container { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; position: relative; }
+    .slide { display: none; width: 100%; height: 100%; max-width: 1200px; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .slide.active { display: flex; }
+    .title-card { background: #161b26; border: 2px solid #2d3345; border-radius: 16px; padding: 60px; max-width: 900px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+    .title-card h2 { font-size: 48px; color: #38bdf8; margin-bottom: 16px; }
+    .title-card h3 { font-size: 24px; color: #cbd5e1; margin-bottom: 24px; font-weight: 400; }
+    .title-card .badge { display: inline-block; background: #1e293b; color: #4ade80; border: 1px solid #334155; padding: 8px 16px; border-radius: 999px; font-size: 16px; font-weight: 600; margin-bottom: 24px; }
+    .title-card p { font-size: 18px; color: #94a3b8; line-height: 1.6; }
+    .slide img { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+    .nav-bar { padding: 12px 24px; background: #1a1d27; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #2d3345; }
+    button { background: #38bdf8; color: #0f172a; border: none; padding: 10px 20px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    button:hover { background: #7dd3fc; }
+    .cue { font-size: 14px; color: #facc15; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>FORGE · Samsung PRISM GenAI Hackathon (Theme 02)</h1>
+    <div class="info">Team SRM_Carrot · SRMIST · Use [Left/Right Arrow] or buttons</div>
+  </div>
+
+  <div class="slide-container">
+    <!-- Slide 1: Title -->
+    <div class="slide active">
+      <div class="title-card">
+        <div class="badge">Theme 02 — Smart Guided Troubleshooting Engine</div>
+        <h2>FORGE</h2>
+        <h3>Zero-Latency, Zero-Cost Deeplinked Device Remediation</h3>
+        <p><strong>Team:</strong> SRM_Carrot &nbsp;|&nbsp; <strong>College:</strong> SRMIST Kattankulathur</p>
+        <p style="margin-top: 12px; color: #64748b;">30 September 2026</p>
+      </div>
+    </div>
+
+    <!-- Slide 2: Figure 1 -->
+    <div class="slide">
+      <img src="../figures/fig1_stage_shift.png" alt="Build vs Runtime Shift">
+    </div>
+
+    <!-- Slide 3: Figure 2 -->
+    <div class="slide">
+      <img src="../figures/fig2_architecture.png" alt="Full Architecture">
+    </div>
+
+    <!-- Slide 4: Figure 4 -->
+    <div class="slide">
+      <img src="../figures/fig4_target_resolution.png" alt="Target & Polarity Resolution">
+    </div>
+
+    <!-- Slide 5: Figure 5 -->
+    <div class="slide">
+      <img src="../figures/fig5_latency.png" alt="Latency Percentiles">
+    </div>
+
+    <!-- Slide 6: Figure 6 -->
+    <div class="slide">
+      <img src="../figures/fig6_ablation.png" alt="Ablation Analysis">
+    </div>
+
+    <!-- Slide 7: Closing -->
+    <div class="slide">
+      <div class="title-card">
+        <div class="badge" style="color: #38bdf8;">Submission Complete</div>
+        <h2>Thank You!</h2>
+        <p style="font-size: 20px; margin: 20px 0;">Public GitHub Repository:</p>
+        <p style="font-size: 22px; color: #4ade80; font-family: monospace;">https://github.com/Alphacew/PRISM_GENAI_HACKATHON_Y2026</p>
+        <p style="margin-top: 24px; color: #94a3b8;">100% Reproducible with one command · $0.00 Inference Cost · 0 Model Calls</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <button onclick="prevSlide()">◀ Previous Slide [←]</button>
+    <div class="cue" id="cueText">Shot 0 (0:00–0:20): Read title card, introduce team SRM_Carrot and FORGE</div>
+    <button onclick="nextSlide()">Next Slide [→] ▶</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const cue = document.getElementById('cueText');
+    let idx = 0;
+    const cues = [
+      "Shot 0 (0:00–0:20): Introduce team SRM_Carrot and project FORGE.",
+      "Shot 1 (0:20–0:50): Explain Fig 1 — hoisting extraction & deeplink matching to build time.",
+      "Architecture: Show full pipeline overview (SIIS compile -> Plan Atlas -> serving lookup).",
+      "Shot 6 (2:50–3:20): Explain Fig 4 — mapping to exact screen and checking toggle polarity.",
+      "Latency: Explain sub-millisecond warm hit and 7ms cold compile-on-miss.",
+      "Shot 10 (4:35–4:55): Explain Fig 6 — ablation chart and honest precision-first trade-off.",
+      "Shot 11 (4:55–5:00): Closing card — mention public GitHub repo and one-command reproduction."
+    ];
+
+    function update() {
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      cue.innerText = cues[idx] || `Slide ${idx+1}`;
+    }
+    function nextSlide() { if (idx < slides.length - 1) { idx++; update(); } }
+    function prevSlide() { if (idx > 0) { idx--; update(); } }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+    });
+  </script>
+</body>
+</html>

@@ -9,6 +9,19 @@ path**.
 
 ---
 
+## 🏆 Submission Deliverables & Links
+
+| Deliverable | Location / URL | Description |
+|---|---|---|
+| 🎥 **Demo Video** | [**Google Drive Video Link**](https://drive.google.com/drive/folders/1QrjJKvw05YEvInxOWxkgEMnecfP9hlbw?usp=sharing) | 5-Minute unedited screen recording walkthrough |
+| 📊 **Presentation Deck** | [`submission/SRMIST_SRM_Carrot_Submission.pptx`](submission/SRMIST_SRM_Carrot_Submission.pptx) | Complete 16-slide presentation with measured figures |
+| 📝 **AI Usage Disclosure** | [`submission/LangAI3.0_AI_Disclosure.docx`](submission/LangAI3.0_AI_Disclosure.docx) | Fully populated official AI disclosure form |
+| 📦 **Dependencies** | [`requirements.txt`](requirements.txt) | Python dependencies |
+| 💻 **GitHub Repository** | [**github.com/Alphacew/PRISM_GENAI_HACKATHON_Y2026**](https://github.com/Alphacew/PRISM_GENAI_HACKATHON_Y2026) | Working prototype code & full reproduction |
+| 🧪 **Evaluation Report** | [`docs/metrics.md`](docs/metrics.md) | Full Appendix C benchmark report |
+
+---
+
 ## The one-sentence version
 
 > Every expensive stage in the reference pipeline — structure extraction,

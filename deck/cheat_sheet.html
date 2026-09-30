@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FORGE Video Cheat Sheet (What to Say)</title>
+  <style>
+    body { background: #0f172a; color: #f8fafc; font-family: -apple-system, system-ui, sans-serif; padding: 24px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+    h1 { color: #38bdf8; font-size: 24px; border-bottom: 2px solid #334155; padding-bottom: 8px; margin-bottom: 16px; }
+    .card { background: #1e293b; border-radius: 10px; padding: 16px; margin-bottom: 16px; border-left: 5px solid #38bdf8; }
+    .card.browser { border-left-color: #a855f7; }
+    .card.term { border-left-color: #22c55e; }
+    .badge { font-size: 12px; font-weight: bold; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; background: #334155; display: inline-block; margin-bottom: 8px; }
+    .browser .badge { background: #581c87; color: #d8b4fe; }
+    .term .badge { background: #14532d; color: #86efac; }
+    .action { font-size: 13px; color: #94a3b8; margin-bottom: 6px; }
+    .say { font-size: 17px; font-weight: 500; color: #f1f5f9; background: #0f172a; padding: 10px 14px; border-radius: 6px; border: 1px solid #334155; }
+  </style>
+</head>
+<body>
+  <h1>🎤 5-Minute Video Cheat Sheet (What to Say)</h1>
+  <p style="color: #94a3b8; margin-bottom: 20px;">Keep this open on your phone or on a side window while your screen records!</p>
+
+  <div class="card browser">
+    <div class="badge">0:00 - 0:25 · Browser (Slide 1)</div>
+    <div class="action">Show Title Card in Firefox</div>
+    <div class="say">"Hello! This is Team SRM_Carrot from SRMIST, presenting FORGE for Theme 02: Smart Guided Troubleshooting Engine. FORGE turns vague customer complaints into one-tap, deeplinked troubleshooting plans."</div>
+  </div>
+
+  <div class="card browser">
+    <div class="badge">0:25 - 0:55 · Browser (Slide 2: Fig 1)</div>
+    <div class="action">Press Right Arrow [➔] to show Figure 1</div>
+    <div class="say">"Most teams put an LLM in the request path, which causes latency, cost, and hallucinated URLs. FORGE hoists structure extraction and deeplink mapping to build time. At runtime, serving is just a sub-millisecond lookup."</div>
+  </div>
+
+  <div class="card term">
+    <div class="badge">0:55 - 1:25 · Terminal</div>
+    <div class="action">Switch to Terminal. Press [ENTER] to run build</div>
+    <div class="say">"Here is our build lane. In 300 milliseconds, it compiles our whole knowledge base into 14 verified troubleshooting plans, audited against strict contract gates."</div>
+  </div>
+
+  <div class="card term">
+    <div class="badge">1:25 - 1:55 · Terminal</div>
+    <div class="action">Press [ENTER] for Cold Request</div>
+    <div class="say">"Here is a brand new complaint with reference text. It compiles on miss in under 10 milliseconds, producing a schema-compliant plan with $0.00 model cost."</div>
+  </div>
+
+  <div class="card term">
+    <div class="badge">1:55 - 2:25 · Terminal</div>
+    <div class="action">Press [ENTER] for Warm Request</div>
+    <div class="say">"Querying the exact same issue again: latency is under 1 millisecond, served straight from our exact hash tier with zero model calls."</div>
+  </div>
+
+  <div class="card term">
+    <div class="badge">2:25 - 2:55 · Terminal</div>
+    <div class="action">Press [ENTER] for Paraphrase Query</div>
+    <div class="say">"Now an unseen colloquial paraphrase: 'phone swipe gestures wrong direction'. Our semantic intent signature resolves it directly to the right settings screen with verified masked deeplinks."</div>
+  </div>
+
+  <div class="card term">
+    <div class="badge">2:55 - 3:30 · Terminal</div>
+    <div class="action">Press [ENTER] for Multi-Intent Query</div>
+    <div class="say">"One utterance with multiple complaints: because 'contexts' is a list, FORGE cleanly decomposes the query and returns multiple ranked goals in one response."</div>
+  </div>
+
+  <div class="card term">
+    <div class="badge">3:30 - 4:00 · Terminal</div>
+    <div class="action">Press [ENTER] for No-Match Fallback</div>
+    <div class="say">"If a user asks about something completely out of domain, like baking bread, we decline gracefully with an empty context and 'no_match' instead of hallucinating."</div>
+  </div>
+
+  <div class="card term">
+    <div class="badge">4:00 - 4:30 · Terminal</div>
+    <div class="action">Press [ENTER] for Live Metrics</div>
+    <div class="say">"Our /v1/metrics endpoint provides live production observability: 85% cache hit rate, P95 under 5 milliseconds, and $0.00 cost per query."</div>
+  </div>
+
+  <div class="card browser">
+    <div class="badge">4:30 - 5:00 · Browser (Slide 7: Thank You)</div>
+    <div class="action">Switch to Browser, flip to last slide</div>
+    <div class="say">"Everything we demonstrated is real, fully tested, and committed to our public GitHub repo with one-command reproducibility. Thank you!"</div>
+  </div>
+</body>
+</html>

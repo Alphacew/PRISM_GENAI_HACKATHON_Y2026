@@ -445,12 +445,10 @@ def build() -> Path:
             r.font.color.rgb = DARK
 
     status, resp = _live_transcript()
-    add_body(s, status, 800000, 2440000, SW - 1600000, 300000, size=12.5,
-             color=GREEN, bold=True)
     add_body(s, resp, 800000, 2800000, SW - 1600000, 2600000, size=11, color=DARK)
-    add_body(s, "Demo video: 5 min — cold request, warm request, paraphrase, multi-intent fan-out, "
-                "no-match fallback, and the /v1/metrics counter moving.",
-             800000, 5500000, SW - 1600000, 400000, size=12, color=GREY)
+    add_body(s, "Demo video (Drive link): "
+                "https://drive.google.com/drive/folders/1QrjJKvw05YEvInxOWxkgEMnecfP9hlbw?usp=sharing",
+             800000, 5600000, SW - 1600000, 350000, size=12, color=NAVY, bold=True)
 
     # --- slide 9: tools & tech ---------------------------------------- #
     s = blank(prs)

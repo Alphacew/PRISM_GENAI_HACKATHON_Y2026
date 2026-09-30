@@ -19,7 +19,7 @@
       "fallback": "no_match"
     },
     "meta": {
-      "latency_ms": 5,
+      "latency_ms": 34,
       "cache_hit": false,
       "model": "none(rules)",
       "cost_usd": 0.0,

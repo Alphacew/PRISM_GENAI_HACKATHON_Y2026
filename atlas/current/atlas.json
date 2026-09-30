@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "version": "current",
- "built_at": "2026-09-30T22:10:08+0530",
+ "built_at": "2026-09-30T23:45:18+0530",
  "encoder_name": "hashed-char-ngram-3-5g",
  "records": [
   {
@@ -2427,6 +2427,6 @@
   "n_resolved": 23,
   "deeplink_resolution_rate": 0.6389,
   "n_rejected": 6,
-  "build_host": "Linux 7.2.8-1-cachyos / py3.12.13"
+  "build_host": "Linux 7.2.8-1-cachyos / py3.14.7"
  }
 }
