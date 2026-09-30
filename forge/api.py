@@ -15,7 +15,7 @@ import time
 from typing import Optional
 
 from fastapi import FastAPI
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
 from .serve import Engine
@@ -85,38 +85,3 @@ def troubleshoot(req: TroubleshootRequest):
         )
     env = eng.troubleshoot(req.query, req.siis_response)
     return JSONResponse(env.model_dump())
-
-_STATIC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "index.html")
-
-
-@app.get("/", include_in_schema=False)
-def ui():
-    """Demo UI: a thin browser client over /v1/troubleshoot and /v1/metrics."""
-    return FileResponse(_STATIC)
-
-
-@app.get("/v1/examples")
-def examples():
-    """One sample query per compiled plan (drawn from its alias set), for the demo UI."""
-    import json
-    path = os.path.join(os.environ.get("FORGE_ATLAS", DEFAULT_ATLAS), "atlas.json")
-    try:
-        with open(path, encoding="utf-8") as fh:
-            records = json.load(fh).get("records", [])
-    except Exception:
-        return {"examples": []}
-    def natural(q: str) -> int:
-        # prefer conversational phrasings; fall back to the shortest usable one
-        return 0 if q.startswith(("hey my phone", "my phone just")) else 1
-
-    out, seen = [], set()
-    for rec in records:
-        title = rec.get("goal", {}).get("title", "")
-        cands = [q for q in rec.get("variations", []) if len(q) >= 12 and "_" not in q]
-        if title in seen or not cands:
-            continue
-        out.append({"title": title, "query": sorted(cands, key=lambda q: (natural(q), len(q)))[0]})
-        seen.add(title)
-        if len(out) >= 6:
-            break
-    return {"examples": out}
