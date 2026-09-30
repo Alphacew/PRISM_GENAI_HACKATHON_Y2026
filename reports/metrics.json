@@ -1,0 +1,176 @@
+{
+ "generated_at": "2026-09-30T18:00:52+0530",
+ "atlas": {
+  "version": "current",
+  "plans": 14,
+  "stats": {
+   "n_sources": 20,
+   "n_plans": 14,
+   "n_actions": 33,
+   "n_resolved": 33,
+   "deeplink_resolution_rate": 1.0,
+   "n_rejected": 6,
+   "build_host": "Linux 7.2.8-1-cachyos / py3.12.13"
+  },
+  "build_ms": 185.7,
+  "encoder": "hashed-char-ngram-3-5g",
+  "rejected": [
+   {
+    "source_id": "row_3",
+    "reason": "no_actions",
+    "topic": "Some things to check first"
+   },
+   {
+    "source_id": "row_10",
+    "reason": "no_actions",
+    "topic": "Screen flickers when using the Camera on a smartphone"
+   },
+   {
+    "source_id": "row_11",
+    "reason": "no_actions",
+    "topic": "Some things to check first"
+   },
+   {
+    "source_id": "row_14",
+    "reason": "no_actions",
+    "topic": "Cracked or bleeding screen on smartphone or tablet"
+   },
+   {
+    "source_id": "row_17",
+    "reason": "no_actions",
+    "topic": "Some things to check first"
+   },
+   {
+    "source_id": "row_19",
+    "reason": "no_actions",
+    "topic": "Cracked or bleeding screen on smartphone or tablet"
+   }
+  ]
+ },
+ "gate_stats": {
+  "plans_passing_gates": 14,
+  "plans_failing_gates": 0
+ },
+ "compliance": {
+  "queries": 20,
+  "schema_conformant": 20,
+  "schema_conformance_pct": 100.0,
+  "gate_failures": {},
+  "url_leaks": 0,
+  "actions_total": 43,
+  "auto_actions": 29,
+  "auto_with_valid_deeplink": 29,
+  "auto_deeplink_coverage_pct": 100.0,
+  "screen_resolution_checked": 29,
+  "screen_resolution_rate_pct": 82.76
+ },
+ "latency": {
+  "n": {
+   "exact": 62,
+   "paraphrase": 60,
+   "cold": 60
+  },
+  "cache_hit_exact": {
+   "p50_ms": 0.37,
+   "p95_ms": 1.12,
+   "min_ms": 0.17
+  },
+  "cache_hit_paraphrase": {
+   "p50_ms": 0.15,
+   "p95_ms": 0.62
+  },
+  "cold_path_compile_on_miss": {
+   "p50_ms": 3.64,
+   "p95_ms": 7.38
+  }
+ },
+ "cache": {
+  "paraphrases_tested": 540,
+  "cache_hit": 379,
+  "cache_hit_rate_pct": 70.19,
+  "wrong_plan_served": 72,
+  "wrong_serve_rate_pct": 13.33,
+  "by_tier": {
+   "exact": 293,
+   "miss": 161,
+   "semantic": 86
+  },
+  "semantic_margin_p50": 1.0,
+  "semantic_margin_p05": 0.0588
+ },
+ "ablation": {
+  "encoder": "hashed-char-ngram-3-5g",
+  "rows": [
+   {
+    "mode": "compile_at_query (guide's baseline placement)",
+    "per_query_p50_ms": 14.79,
+    "per_query_p95_ms": 15.73
+   },
+   {
+    "mode": "lexical",
+    "actions": 33,
+    "resolved": 33,
+    "resolution_rate_pct": 100.0,
+    "generated_answers_actions": 0,
+    "generic_placeholder_rate_pct": 0.0,
+    "plans_failing_gates": 0,
+    "full_corpus_compile_ms": 157.1,
+    "per_source_compile_ms": 7.85
+   },
+   {
+    "mode": "dense",
+    "actions": 33,
+    "resolved": 33,
+    "resolution_rate_pct": 100.0,
+    "generated_answers_actions": 0,
+    "generic_placeholder_rate_pct": 0.0,
+    "plans_failing_gates": 0,
+    "full_corpus_compile_ms": 154.5,
+    "per_source_compile_ms": 7.73
+   },
+   {
+    "mode": "hybrid_no_path",
+    "actions": 33,
+    "resolved": 33,
+    "resolution_rate_pct": 100.0,
+    "generated_answers_actions": 0,
+    "generic_placeholder_rate_pct": 0.0,
+    "plans_failing_gates": 0,
+    "full_corpus_compile_ms": 135.4,
+    "per_source_compile_ms": 6.77
+   },
+   {
+    "mode": "hybrid",
+    "actions": 33,
+    "resolved": 33,
+    "resolution_rate_pct": 100.0,
+    "generated_answers_actions": 0,
+    "generic_placeholder_rate_pct": 0.0,
+    "plans_failing_gates": 0,
+    "full_corpus_compile_ms": 175.5,
+    "per_source_compile_ms": 8.78
+   }
+  ]
+ },
+ "service_counters": {
+  "requests": 812,
+  "cache_hit_rate": 0.6663,
+  "exact_hits": 430,
+  "semantic_hits": 111,
+  "misses": 271,
+  "compile_on_miss": 72,
+  "multi_context_responses": 27,
+  "no_match_responses": 181,
+  "latency_ms": {
+   "p50": 0.36,
+   "p95": 3.43,
+   "p50_hit": 0.23,
+   "p95_hit": 1.61,
+   "p95_cold": 4.66,
+   "n": 812
+  },
+  "cost_usd_per_query": 0.0,
+  "atlas_version": "current",
+  "atlas_plans": 14
+ }
+}

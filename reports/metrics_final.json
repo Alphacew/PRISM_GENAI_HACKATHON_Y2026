@@ -1,0 +1,184 @@
+{
+ "generated_at": "2026-09-30T22:08:22+0530",
+ "atlas": {
+  "version": "current",
+  "plans": 14,
+  "stats": {
+   "n_sources": 20,
+   "n_plans": 14,
+   "n_actions": 36,
+   "n_resolved": 23,
+   "deeplink_resolution_rate": 0.6389,
+   "n_rejected": 6,
+   "build_host": "Linux 7.2.8-1-cachyos / py3.12.13"
+  },
+  "build_ms": 144.7,
+  "encoder": "hashed-char-ngram-3-5g",
+  "rejected": [
+   {
+    "source_id": "row_3",
+    "reason": "no_actions",
+    "topic": "Some things to check first"
+   },
+   {
+    "source_id": "row_10",
+    "reason": "no_actions",
+    "topic": "Screen flickers when using the Camera on a smartphone"
+   },
+   {
+    "source_id": "row_11",
+    "reason": "no_actions",
+    "topic": "Some things to check first"
+   },
+   {
+    "source_id": "row_14",
+    "reason": "no_actions",
+    "topic": "Cracked or bleeding screen on smartphone or tablet"
+   },
+   {
+    "source_id": "row_17",
+    "reason": "no_actions",
+    "topic": "Some things to check first"
+   },
+   {
+    "source_id": "row_19",
+    "reason": "no_actions",
+    "topic": "Cracked or bleeding screen on smartphone or tablet"
+   }
+  ]
+ },
+ "gate_stats": {
+  "plans_passing_gates": 14,
+  "plans_failing_gates": 0
+ },
+ "compliance": {
+  "queries": 20,
+  "schema_conformant": 20,
+  "schema_conformance_pct": 100.0,
+  "gate_failures": {},
+  "url_leaks": 0,
+  "actions_total": 44,
+  "auto_actions": 26,
+  "auto_with_valid_deeplink": 26,
+  "auto_deeplink_coverage_pct": 100.0,
+  "screen_resolution_checked": 26,
+  "screen_resolution_rate_pct": 84.62
+ },
+ "latency": {
+  "n": {
+   "exact": 56,
+   "paraphrase": 60,
+   "cold": 60
+  },
+  "cache_hit_exact": {
+   "p50_ms": 0.41,
+   "p95_ms": 0.98,
+   "min_ms": 0.18
+  },
+  "cache_hit_paraphrase": {
+   "p50_ms": 0.17,
+   "p95_ms": 0.58
+  },
+  "cold_path_compile_on_miss": {
+   "p50_ms": 3.22,
+   "p95_ms": 7.0
+  }
+ },
+ "cache": {
+  "paraphrases_tested": 540,
+  "cache_hit": 389,
+  "cache_hit_rate_pct": 72.04,
+  "novel_wording_tested": 158,
+  "novel_wording_hit": 54,
+  "novel_wording_recall_pct": 34.18,
+  "wrong_plan_served": 77,
+  "wrong_serve_rate_pct": 14.26,
+  "wrong_serve_novel_pct": 13.29,
+  "by_tier": {
+   "exact": 293,
+   "miss": 151,
+   "semantic": 96
+  },
+  "semantic_margin_p50": 1.0,
+  "semantic_margin_p05": 0.0458
+ },
+ "ablation": {
+  "encoder": "hashed-char-ngram-3-5g",
+  "rows": [
+   {
+    "mode": "compile_at_query (guide's baseline placement)",
+    "per_query_p50_ms": 18.72,
+    "per_query_p95_ms": 21.47
+   },
+   {
+    "mode": "lexical",
+    "actions": 36,
+    "resolved": 22,
+    "accept_rate_pct": 61.11,
+    "mean_target_overlap_of_accepted": 0.7894,
+    "polarity_agreement_pct": 100.0,
+    "generic_placeholder_rate_pct": 38.89,
+    "plans_failing_gates": 0,
+    "full_corpus_compile_ms": 118.9,
+    "per_source_compile_ms": 5.94
+   },
+   {
+    "mode": "dense",
+    "actions": 36,
+    "resolved": 28,
+    "accept_rate_pct": 77.78,
+    "mean_target_overlap_of_accepted": 0.788,
+    "polarity_agreement_pct": 100.0,
+    "generic_placeholder_rate_pct": 22.22,
+    "plans_failing_gates": 0,
+    "full_corpus_compile_ms": 120.5,
+    "per_source_compile_ms": 6.02
+   },
+   {
+    "mode": "hybrid_no_path",
+    "actions": 36,
+    "resolved": 16,
+    "accept_rate_pct": 44.44,
+    "mean_target_overlap_of_accepted": 0.8131,
+    "polarity_agreement_pct": 100.0,
+    "generic_placeholder_rate_pct": 55.56,
+    "plans_failing_gates": 0,
+    "full_corpus_compile_ms": 101.6,
+    "per_source_compile_ms": 5.08
+   },
+   {
+    "mode": "hybrid",
+    "actions": 36,
+    "resolved": 23,
+    "accept_rate_pct": 63.89,
+    "mean_target_overlap_of_accepted": 0.7894,
+    "polarity_agreement_pct": 100.0,
+    "generic_placeholder_rate_pct": 36.11,
+    "plans_failing_gates": 0,
+    "full_corpus_compile_ms": 122.7,
+    "per_source_compile_ms": 6.14
+   }
+  ]
+ },
+ "service_counters": {
+  "requests": 800,
+  "cache_hit_rate": 0.6813,
+  "exact_hits": 421,
+  "semantic_hits": 124,
+  "misses": 255,
+  "compile_on_miss": 72,
+  "multi_context_responses": 14,
+  "no_match_responses": 165,
+  "latency_ms": {
+   "p50": 0.35,
+   "p95": 3.16,
+   "p50_hit": 0.26,
+   "p95_hit": 0.93,
+   "p95_cold": 5.12,
+   "n": 800
+  },
+  "cost_usd_per_query": 0.0,
+  "atlas_version": "current",
+  "atlas_plans": 14
+ }
+}

@@ -1,0 +1,2432 @@
+{
+ "schema": 1,
+ "version": "current",
+ "built_at": "2026-09-30T22:08:22+0530",
+ "encoder_name": "hashed-char-ngram-3-5g",
+ "records": [
+  {
+   "plan_id": "FG-8530d8d09b",
+   "source_id": "row_1",
+   "source_title": "Email server not responding on smartphone or tablet",
+   "topic": "Email server not responding on smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Email Server Responding Troubleshooting",
+    "title": "Email server responding",
+    "actions": [
+     {
+      "actionName": "Verify Your Phone's Internet Connection - Wi-Fi Icon to Check",
+      "description": "It will fix icon check",
+      "stepGroups": [
+       {
+        "steps": [
+         "Ensure your phone is connected to a stable Wi-Fi or mobile data network.",
+         "Swipe down from the top of your phone's screen to open the quick settings panel.",
+         "Touch and hold the Wi-Fi icon to check your connection status."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/bb94e0ebc2",
+         "key": "Intelligent Wi-Fi",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/12886ae633",
+         "description": "Opens the Intelligent Wi-Fi settings page in device Settings on the device.",
+         "message": "View WiFi Settings",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Verify Your Phone's Internet Connection - Wi-Fi",
+      "description": "It will let you fix settings",
+      "stepGroups": [
+       {
+        "steps": [
+         "Go to Settings.",
+         "Tap Connections.",
+         "Tap Wi-Fi."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/bb94e0ebc2",
+         "key": "Intelligent Wi-Fi",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/12886ae633",
+         "description": "Opens the Intelligent Wi-Fi settings page in device Settings on the device.",
+         "message": "View WiFi Settings",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Clear the Email App's Cache and Data - Clear the App's Cache",
+      "description": "It will clear app cache",
+      "stepGroups": [
+       {
+        "steps": [
+         "Navigate to Settings.",
+         "Tap Apps.",
+         "Select your email app.",
+         "Tap Storage.",
+         "Tap clear cache."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/fa0d27aee6",
+         "key": "Allow apps to be pinned",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/efb47d7185",
+         "description": "Disables app pinning via device Settings on the device.",
+         "message": "Disable Allow apps to be pinned",
+         "classes": null,
+         "originalType": "offURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Clear the Email App's Cache and Data - Clear the App's Data",
+      "description": "It will clear app data",
+      "stepGroups": [
+       {
+        "steps": [
+         "Navigate to Settings.",
+         "Tap Apps.",
+         "Select your email app.",
+         "Tap Storage.",
+         "Tap clear data.",
+         "Tap OK."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/fa0d27aee6",
+         "key": "Allow apps to be pinned",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/efb47d7185",
+         "description": "Disables app pinning via device Settings on the device.",
+         "message": "Disable Allow apps to be pinned",
+         "classes": null,
+         "originalType": "offURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Restart Your Phone in Safe Mode",
+      "description": "It will restart safe mode",
+      "stepGroups": [
+       {
+        "steps": [
+         "Press and hold the Power button or Side button.",
+         "Touch and hold the power off icon.",
+         "Tap safe mode when it appears on the screen."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.66
+   },
+   "intent_signature": "display::blank+email+flicker::trigger:none",
+   "domain": "display",
+   "variations": [
+    "1. My TechCorp A15G tablet screen flashes and then goes completely blank whenever I tap to open an email in Gmail, and after it works for a short time it goes blank again.",
+    "I am experiencing the following issue: flicker blank email.",
+    "hey my phone flicker blank email out of nowhere, any fix?",
+    "flicker blank email fix",
+    "this is so annoying, my phone flicker blank email and i cant do anything about it",
+    "my pone filcker blakn emali and i catn fgur out wat to doo",
+    "how to fix flicker blank email",
+    "seriously why does my phone flicker blank email every single time, ive tried everything",
+    "my phoe flicekr bank emil and i cnt fgiur out wat to doo",
+    "Flicker blank email on my device after the recent change; please advise."
+   ],
+   "keywords": "flicker blank email",
+   "seed": "1. My TechCorp A15G tablet screen flashes and then goes completely blank whenever I tap to open an email in Gmail, and after it works for a short time it goes blank again.",
+   "provenance": [
+    {
+     "action": "Verify Your Phone's Internet Connection - Wi-Fi Icon to Check",
+     "resolution": "path=quick settings panel > Wi-Fi icon to check your connection status; leaf='Wi-Fi icon to check your connection status'; polarity=none; rel=0.865; factor=1.35; picked=DL-0513(open:Intelligent Wi-Fi); accepted (target overlap 0.67 vs needed 0.50)",
+     "confidence": 1.168,
+     "spans": [
+      {
+       "start": 692,
+       "end": 764,
+       "text": "Ensure your phone is connected to a stable Wi-Fi or mobile data network."
+      },
+      {
+       "start": 765,
+       "end": 845,
+       "text": "Swipe down from the top of your phone's screen to open the Quick settings panel."
+      },
+      {
+       "start": 846,
+       "end": 908,
+       "text": "Touch and hold the Wi-Fi icon to check your connection status."
+      }
+     ]
+    },
+    {
+     "action": "Verify Your Phone's Internet Connection - Wi-Fi",
+     "resolution": "path=Settings > Connections > Wi-Fi; leaf='Wi-Fi'; polarity=none; rel=0.856; factor=1.35; picked=DL-0513(open:Intelligent Wi-Fi); accepted (target overlap 0.67 vs needed 0.50)",
+     "confidence": 1.156,
+     "spans": [
+      {
+       "start": 692,
+       "end": 764,
+       "text": "Ensure your phone is connected to a stable Wi-Fi or mobile data network."
+      },
+      {
+       "start": 765,
+       "end": 845,
+       "text": "Swipe down from the top of your phone's screen to open the Quick settings panel."
+      },
+      {
+       "start": 846,
+       "end": 908,
+       "text": "Touch and hold the Wi-Fi icon to check your connection status."
+      }
+     ]
+    },
+    {
+     "action": "Clear the Email App's Cache and Data - Clear the App's Cache",
+     "resolution": "path=Settings > Apps > email app > Storage > clear cache; leaf='clear cache'; polarity=none; rel=0.792; factor=1.03; picked=DL-0218(disable:app pinning); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.8196,
+     "spans": [
+      {
+       "start": 1820,
+       "end": 1841,
+       "text": "Navigate to Settings."
+      },
+      {
+       "start": 1842,
+       "end": 1851,
+       "text": "Tap Apps."
+      },
+      {
+       "start": 1852,
+       "end": 1874,
+       "text": "Select your email app."
+      },
+      {
+       "start": 1875,
+       "end": 1887,
+       "text": "Tap Storage."
+      },
+      {
+       "start": 1888,
+       "end": 1904,
+       "text": "Tap Clear cache."
+      }
+     ]
+    },
+    {
+     "action": "Clear the Email App's Cache and Data - Clear the App's Data",
+     "resolution": "path=Settings > Apps > email app > Storage > clear data > OK; leaf='OK'; polarity=none; rel=0.675; factor=1.03; picked=DL-0218(disable:app pinning); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.699,
+     "spans": [
+      {
+       "start": 1820,
+       "end": 1841,
+       "text": "Navigate to Settings."
+      },
+      {
+       "start": 1842,
+       "end": 1851,
+       "text": "Tap Apps."
+      },
+      {
+       "start": 1852,
+       "end": 1874,
+       "text": "Select your email app."
+      },
+      {
+       "start": 1875,
+       "end": 1887,
+       "text": "Tap Storage."
+      },
+      {
+       "start": 1998,
+       "end": 2030,
+       "text": "Tap Clear data, and then tap OK."
+      },
+      {
+       "start": 1998,
+       "end": 2030,
+       "text": "Tap Clear data, and then tap OK."
+      }
+     ]
+    },
+    {
+     "action": "Restart Your Phone in Safe Mode",
+     "resolution": "path=and hold the Power button or Side button > power off icon > safe mode when it appears on the; leaf='safe mode when it appears on the'; polarity=none; rel=0.864; factor=1.00; picked=DL-0099(open:touch and hold to edit); declined (target overlap 0.33 vs needed 0.50) -> generic placeholder",
+     "confidence": 0.8644,
+     "spans": [
+      {
+       "start": 2298,
+       "end": 2345,
+       "text": "Press and hold the Power button or Side button."
+      },
+      {
+       "start": 2490,
+       "end": 2524,
+       "text": "Touch and hold the Power off icon."
+      },
+      {
+       "start": 2525,
+       "end": 2569,
+       "text": "Tap Safe mode when it appears on the screen."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 5,
+    "n_resolved": 4,
+    "n_generic": 1,
+    "resolution_rate": 0.8,
+    "mean_target_overlap": 0.5833,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "9af7d9082b1da072",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 5,
+     "auto_actions": 4,
+     "auto_with_deeplink": 4
+    }
+   }
+  },
+  {
+   "plan_id": "FG-f6bd03b830",
+   "source_id": "row_2",
+   "source_title": "Blank or black display on a smartphone or tablet",
+   "topic": "Blank or black display on a smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Blank Black Display Troubleshooting",
+    "title": "Blank black display",
+    "actions": [
+     {
+      "actionName": "Force a Restart",
+      "description": "It will let you fix restart",
+      "stepGroups": [
+       {
+        "steps": [
+         "Press and hold both the Power button (or Side button)."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/017e21ffd9",
+         "key": "Side button",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/fbc14cbc74",
+         "description": "Opens the Side button settings settings page in device Settings on the device.",
+         "message": "View Side button",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Check for Physical Damage and Liquid Exposure",
+      "description": "It will check liquid exposure",
+      "stepGroups": [
+       {
+        "steps": [
+         "Remove any cases or accessories that might be covering the charging port or buttons.",
+         "Turn off your phone or tablet."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.54
+   },
+   "intent_signature": "display::app+blank::trigger:app",
+   "domain": "display",
+   "variations": [
+    "My Nexa X1 screen turns completely blank or white and no text appears when I search for a stock price or use the Quick Assist app, and it happens with other apps too.",
+    "Blank app on my device after the recent change; please advise.",
+    "hey my phone blank app out of nowhere, any fix?",
+    "how to fix blank app",
+    "seriously why does my phone blank app every single time, ive tried everything",
+    "my pohne bank app and i cnat fgiur out wat to doo",
+    "so my phone keeps blank app and its driving me crazy",
+    "blank app",
+    "devie blnak app pls hlp",
+    "My device blank app and I would like assistance resolving this."
+   ],
+   "keywords": "blank app",
+   "seed": "My Nexa X1 screen turns completely blank or white and no text appears when I search for a stock price or use the Quick Assist app, and it happens with other apps too.",
+   "provenance": [
+    {
+     "action": "Check for Physical Damage and Liquid Exposure",
+     "resolution": "path=phone or tablet; leaf='phone or tablet'; polarity=disable; rel=0.830; factor=1.25; picked=DL-0090(disable:double tap to turn off screen); declined (target overlap 0.00 vs needed 0.50) -> generic placeholder",
+     "confidence": 1.0381,
+     "spans": [
+      {
+       "start": 546,
+       "end": 918,
+       "text": "Please remove any cases or accessories that might be covering the charging port or buttons. Examine the USB connections for any corrosion or bent pins. The USB connection should feel secure with minimal movement. Next, let's check the Liquid Damage Indicator (LDI). The LDI should normally appear solid white, or white with pink or purple X's. Here's how to check the LDI:"
+      },
+      {
+       "start": 919,
+       "end": 1087,
+       "text": "Turn off your phone or tablet. Insert the ejector tool into the small hole next to the SIM/MicroSD tray to eject the tray. Shine a flashlight into the SIM/MicroSD slot."
+      }
+     ]
+    },
+    {
+     "action": "Force a Restart",
+     "resolution": "path=and hold both the Power button (or Side button); leaf='and hold both the Power button (or Side button)'; polarity=none; rel=0.852; factor=1.35; picked=DL-0510(open:Side button); accepted (target overlap 1.00 vs needed 0.50)",
+     "confidence": 1.1506,
+     "spans": [
+      {
+       "start": 1533,
+       "end": 1653,
+       "text": "Press and hold both the Power button (or Side button) and the Volume down button simultaneously for at least 20 seconds."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 2,
+    "n_resolved": 1,
+    "n_generic": 1,
+    "resolution_rate": 0.5,
+    "mean_target_overlap": 1.0,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "8219867106c1755b",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 2,
+     "auto_actions": 1,
+     "auto_with_deeplink": 1
+    }
+   }
+  },
+  {
+   "plan_id": "FG-5c7792351c",
+   "source_id": "row_4",
+   "source_title": "Blank or black display on a smartphone or tablet",
+   "topic": "Blank or black display on a smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Blank Black Display Troubleshooting",
+    "title": "Blank black display",
+    "actions": [
+     {
+      "actionName": "Force a Restart",
+      "description": "It will let you fix restart",
+      "stepGroups": [
+       {
+        "steps": [
+         "Press and hold both the Power button (or Side button)."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/017e21ffd9",
+         "key": "Side button",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/fbc14cbc74",
+         "description": "Opens the Side button settings settings page in device Settings on the device.",
+         "message": "View Side button",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Check for Physical Damage and Liquid Exposure",
+      "description": "It will check liquid exposure",
+      "stepGroups": [
+       {
+        "steps": [
+         "Remove any cases or accessories that might be covering the charging port or buttons.",
+         "Turn off your phone or tablet."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.54
+   },
+   "intent_signature": "display::blank::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My TechCorp Nexa A14/A15 screen suddenly went completely black on its own after about a month of use. It doesn't display anything, even when I try to turn it on.",
+    "I am experiencing the following issue: blank.",
+    "so my phone keeps blank and its driving me crazy",
+    "blank",
+    "this is so annoying, my phone blank and i cant do anything about it",
+    "my phoen bank and i cnt fgiur out wat to doo",
+    "My device blank and I would like assistance resolving this.",
+    "my phoe blnak and i cnat figr out wat to doo",
+    "hey my phone blank out of nowhere, any fix?",
+    "blank fix"
+   ],
+   "keywords": "blank",
+   "seed": "My TechCorp Nexa A14/A15 screen suddenly went completely black on its own after about a month of use. It doesn't display anything, even when I try to turn it on.",
+   "provenance": [
+    {
+     "action": "Check for Physical Damage and Liquid Exposure",
+     "resolution": "path=phone or tablet; leaf='phone or tablet'; polarity=disable; rel=0.830; factor=1.25; picked=DL-0090(disable:double tap to turn off screen); declined (target overlap 0.00 vs needed 0.50) -> generic placeholder",
+     "confidence": 1.0381,
+     "spans": [
+      {
+       "start": 546,
+       "end": 918,
+       "text": "Please remove any cases or accessories that might be covering the charging port or buttons. Examine the USB connections for any corrosion or bent pins. The USB connection should feel secure with minimal movement. Next, let's check the Liquid Damage Indicator (LDI). The LDI should normally appear solid white, or white with pink or purple X's. Here's how to check the LDI:"
+      },
+      {
+       "start": 919,
+       "end": 1087,
+       "text": "Turn off your phone or tablet. Insert the ejector tool into the small hole next to the SIM/MicroSD tray to eject the tray. Shine a flashlight into the SIM/MicroSD slot."
+      }
+     ]
+    },
+    {
+     "action": "Force a Restart",
+     "resolution": "path=and hold both the Power button (or Side button); leaf='and hold both the Power button (or Side button)'; polarity=none; rel=0.852; factor=1.35; picked=DL-0510(open:Side button); accepted (target overlap 1.00 vs needed 0.50)",
+     "confidence": 1.1506,
+     "spans": [
+      {
+       "start": 1533,
+       "end": 1653,
+       "text": "Press and hold both the Power button (or Side button) and the Volume down button simultaneously for at least 20 seconds."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 2,
+    "n_resolved": 1,
+    "n_generic": 1,
+    "resolution_rate": 0.5,
+    "mean_target_overlap": 1.0,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "8219867106c1755b",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 2,
+     "auto_actions": 1,
+     "auto_with_deeplink": 1
+    }
+   }
+  },
+  {
+   "plan_id": "FG-aa69121754",
+   "source_id": "row_5",
+   "source_title": "Transfer Secure folder with Data Transfer",
+   "topic": "Transfer Secure folder with Data Transfer",
+   "goal": {
+    "goal": "Follow these steps to perform this Transfer Secure Folder Troubleshooting",
+    "title": "Transfer secure folder",
+    "actions": [
+     {
+      "actionName": "2. Open Data Transfer App - Data Transfer to Open",
+      "description": "It will fix transfer open",
+      "stepGroups": [
+       {
+        "steps": [
+         "Swipe up on the Home screen to access the Apps screen.",
+         "Tap the Search field.",
+         "Enter.",
+         "Select Data Transfer to open the app, Alternatively."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     },
+     {
+      "actionName": "2. Open Data Transfer App - Send From This Phone",
+      "description": "It will let you fix settings",
+      "stepGroups": [
+       {
+        "steps": [
+         "Navigate to the TechCorp folder on the Apps screen.",
+         "Open Data Transfer from there.",
+         "Tap Receive on this phone, Then, on the old device.",
+         "Tap Send from this phone."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.45
+   },
+   "intent_signature": "display::blank+network::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My tablet screen stays completely blank when I try to use Data Transfer to scan the QR code for transferring data from my Nexa X1 phone, so the transfer can't proceed.",
+    "I am experiencing the following issue: blank network.",
+    "my phone just blank network, started this morning",
+    "how to fix blank network",
+    "seriously why does my phone blank network every single time, ive tried everything",
+    "devie blnk netwrok pls hapl",
+    "My device blank network and I would like assistance resolving this.",
+    "so my phone keeps blank network and its driving me crazy",
+    "blank network fix",
+    "this is so annoying, my phone blank network and i cant do anything about it"
+   ],
+   "keywords": "blank network",
+   "seed": "My tablet screen stays completely blank when I try to use Data Transfer to scan the QR code for transferring data from my Nexa X1 phone, so the transfer can't proceed.",
+   "provenance": [
+    {
+     "action": "2. Open Data Transfer App - Data Transfer to Open",
+     "resolution": "path=Search field > Data Transfer to open the app, Alternatively; leaf='Data Transfer to open the app, Alternatively'; polarity=none; rel=0.689; factor=1.10; picked=DL-0469(monitor:refrigerator auto open door stat); declined (target overlap 0.20 vs needed 0.34) -> generic placeholder",
+     "confidence": 0.7581,
+     "spans": [
+      {
+       "start": 536,
+       "end": 774,
+       "text": "Swipe up on the Home screen to access the Apps screen. Tap the Search field, then enter and select Data Transfer to open the app. Alternatively, you can navigate to the TechCorp folder on the Apps screen and open Data Transfer from there."
+      },
+      {
+       "start": 536,
+       "end": 774,
+       "text": "Swipe up on the Home screen to access the Apps screen. Tap the Search field, then enter and select Data Transfer to open the app. Alternatively, you can navigate to the TechCorp folder on the Apps screen and open Data Transfer from there."
+      },
+      {
+       "start": 536,
+       "end": 774,
+       "text": "Swipe up on the Home screen to access the Apps screen. Tap the Search field, then enter and select Data Transfer to open the app. Alternatively, you can navigate to the TechCorp folder on the Apps screen and open Data Transfer from there."
+      },
+      {
+       "start": 536,
+       "end": 774,
+       "text": "Swipe up on the Home screen to access the Apps screen. Tap the Search field, then enter and select Data Transfer to open the app. Alternatively, you can navigate to the TechCorp folder on the Apps screen and open Data Transfer from there."
+      }
+     ]
+    },
+    {
+     "action": "2. Open Data Transfer App - Send From This Phone",
+     "resolution": "path=Data Transfer from there > Receive on this phone, Then, on the old device > Send from this phone; leaf='Send from this phone'; polarity=none; rel=0.842; factor=1.00; picked=DL-0083(open:diagnostic data reporting); declined (target overlap 0.33 vs needed 0.50) -> generic placeholder",
+     "confidence": 0.8416,
+     "spans": [
+      {
+       "start": 536,
+       "end": 774,
+       "text": "Swipe up on the Home screen to access the Apps screen. Tap the Search field, then enter and select Data Transfer to open the app. Alternatively, you can navigate to the TechCorp folder on the Apps screen and open Data Transfer from there."
+      },
+      {
+       "start": 536,
+       "end": 774,
+       "text": "Swipe up on the Home screen to access the Apps screen. Tap the Search field, then enter and select Data Transfer to open the app. Alternatively, you can navigate to the TechCorp folder on the Apps screen and open Data Transfer from there."
+      },
+      {
+       "start": 536,
+       "end": 774,
+       "text": "Swipe up on the Home screen to access the Apps screen. Tap the Search field, then enter and select Data Transfer to open the app. Alternatively, you can navigate to the TechCorp folder on the Apps screen and open Data Transfer from there."
+      },
+      {
+       "start": 536,
+       "end": 774,
+       "text": "Swipe up on the Home screen to access the Apps screen. Tap the Search field, then enter and select Data Transfer to open the app. Alternatively, you can navigate to the TechCorp folder on the Apps screen and open Data Transfer from there."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 2,
+    "n_resolved": 0,
+    "n_generic": 2,
+    "resolution_rate": 0.0,
+    "mean_target_overlap": 0.0,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "06bd3fa27ba090f0",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 2,
+     "auto_actions": 0,
+     "auto_with_deeplink": 0
+    }
+   }
+  },
+  {
+   "plan_id": "FG-b579ed1373",
+   "source_id": "row_7",
+   "source_title": "Use Multi window and App pairs on your smartphone or tablet",
+   "topic": "Use Multi window and App pairs on your smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Use Multi Window Troubleshooting",
+    "title": "Use multi window",
+    "actions": [
+     {
+      "actionName": "Swipe Gestures for Multi Window",
+      "description": "It will open multi window",
+      "stepGroups": [
+       {
+        "steps": [
+         "Navigate to.",
+         "Open Settings.",
+         "Tap Advanced features.",
+         "Tap Multi window.",
+         "Tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode.",
+         "Drag the pop-up to the side of the screen to hide it.",
+         "Tap it again to bring it back to the center of the screen.",
+         "Tap the top of the pop-up window to use additional options.",
+         "Drag."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/825fc8b84c",
+         "key": "Swipe for pop-up view",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/7832861927",
+         "description": "Enables swipe for pop-up view via device Settings on the device.",
+         "message": "Enable Swipe for pop-up view",
+         "classes": null,
+         "originalType": "onURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Exit Multi Window",
+      "description": "It will fix multi window",
+      "stepGroups": [
+       {
+        "steps": [
+         "Tap the Home icon."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/e2aefc4571",
+         "key": "Show multi window menu with 1 window",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/bd9ead5bed",
+         "description": "Enables multi window menu via device Settings on the device.",
+         "message": "Enable Show multi window menu with 1 window",
+         "classes": null,
+         "originalType": "onURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Create an App Pair - Desired App",
+      "description": "It will let you fix app",
+      "stepGroups": [
+       {
+        "steps": [
+         "Swipe left to open the Quick Access panel.",
+         "Touch and hold your desired app.",
+         "Drag."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/36a903f6ee",
+         "key": "App notifications",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/0426564a72",
+         "description": "Opens the app notifications settings page in device Settings on the device.",
+         "message": "View Notification Settings",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Create an App Pair - Two Arrows to Swap",
+      "description": "It will fix arrows swap",
+      "stepGroups": [
+       {
+        "steps": [
+         "Open the Quick Access panel again.",
+         "Tap the dotted divider between the two windows to change the orientation, create an App pair:",
+         "Tap the two arrows to swap the apps' positions.",
+         "Tap the Add to app pair icon (it may have a plus sign or a star) to create an App pair."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.62
+   },
+   "intent_signature": "display::app+blank::trigger:app",
+   "domain": "display",
+   "variations": [
+    "My tablet's screen stays dark and only three app icons are lit while the rest are dark and won't open, so nothing loads on the screen and I can't use the device.",
+    "I am experiencing the following issue: blank app.",
+    "my phone just blank app, started this morning",
+    "blank app",
+    "seriously why does my phone blank app every single time, ive tried everything",
+    "my phne blak app and i cnt fgur out wat to doo",
+    "My device blank app and I would like assistance resolving this.",
+    "so my phone keeps blank app and its driving me crazy",
+    "how to fix blank app",
+    "this is so annoying, my phone blank app and i cant do anything about it"
+   ],
+   "keywords": "blank app",
+   "seed": "My tablet's screen stays dark and only three app icons are lit while the rest are dark and won't open, so nothing loads on the screen and I can't use the device.",
+   "provenance": [
+    {
+     "action": "Swipe Gestures for Multi Window",
+     "resolution": "path=Settings > Advanced features > Multi window > it again to bring it back to the center of the > top of the pop-up window to use additional; leaf='top of the pop-up window to use additional'; polarity=none; rel=0.880; factor=1.03; picked=DL-0268(enable:swipe for pop-up view); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.9108,
+     "spans": [
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 4181,
+       "end": 4442,
+       "text": "Drag and drop apps from the Taskbar Drag and drop apps from the Quick Access panel Select apps from the Recents menu Drag and drop a URL or hyperlink Drag and drop apps from your notifications Use two-finger swipe gestures from the bottom or sides of the screen"
+      }
+     ]
+    },
+    {
+     "action": "Exit Multi Window",
+     "resolution": "path=Home icon; leaf='Home icon'; polarity=none; rel=0.765; factor=1.22; picked=DL-0247(enable:multi window menu); accepted (target overlap 0.67 vs needed 0.50)",
+     "confidence": 0.9296,
+     "spans": [
+      {
+       "start": 4566,
+       "end": 4683,
+       "text": "To do this, tap the Home icon. This will close them completely on the Home screen but leave them together in Recents."
+      }
+     ]
+    },
+    {
+     "action": "Create an App Pair - Desired App",
+     "resolution": "path=desired app; leaf='desired app'; polarity=none; rel=0.779; factor=1.15; picked=DL-0481(open:app notifications); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.8962,
+     "spans": [
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      }
+     ]
+    },
+    {
+     "action": "Create an App Pair - Two Arrows to Swap",
+     "resolution": "path=Quick Access panel again > two arrows to swap the apps' positions; leaf='two arrows to swap the apps' positions'; polarity=none; rel=0.823; factor=1.00; picked=DL-0383(open:emoji pair sticker suggestions); declined (target overlap 0.25 vs needed 0.50) -> generic placeholder",
+     "confidence": 0.8232,
+     "spans": [
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6376,
+       "end": 6485,
+       "text": "Open the Quick Access panel again, and then drag and drop a second app into the bottom portion of the screen."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 4,
+    "n_resolved": 3,
+    "n_generic": 1,
+    "resolution_rate": 0.75,
+    "mean_target_overlap": 0.5556,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "ffe03a2c98718999",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 4,
+     "auto_actions": 3,
+     "auto_with_deeplink": 3
+    }
+   }
+  },
+  {
+   "plan_id": "FG-69a1d457bb",
+   "source_id": "row_8",
+   "source_title": "Screen mirroring to your TechCorp TV",
+   "topic": "Screen mirroring to your TechCorp TV",
+   "goal": {
+    "goal": "Follow these steps to perform this Screen Mirroring Techcorp Troubleshooting",
+    "title": "Screen mirroring techcorp",
+    "actions": [
+     {
+      "actionName": "Mirror Your Screen",
+      "description": "It will fix your screen",
+      "stepGroups": [
+       {
+        "steps": [
+         "Select Add device or Add Bluetooth or other device, Then.",
+         "Select Wireless display or dock.",
+         "Select your TV once its name is displayed, If prompted.",
+         "Select Allow on your TV."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/47c20705a7",
+         "key": "Privacy display",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/0a53bdfc13",
+         "description": "Enables privacy display via device Settings on the device.",
+         "message": "Enable Privacy display",
+         "classes": null,
+         "originalType": "onURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Disconnect the Devices",
+      "description": "It will let you disconnect devices",
+      "stepGroups": [
+       {
+        "steps": [
+         "Select Remove device.",
+         "Select Yes."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/8b5ab2c1e2",
+         "key": "Connected devices",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/34e7efcaf0",
+         "description": "Opens the connected devices settings page in device Settings on the device.",
+         "message": "View Device Details",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Mirror Your TV with Smart View",
+      "description": "It will fix smart view",
+      "stepGroups": [
+       {
+        "steps": [
+         "Open the quick settings panel by swiping down from the top right of your screen.",
+         "Tap Smart View.",
+         "Select your TV from the list of Available devices.",
+         "Tap Start now, If prompted.",
+         "Enter a PIN or allow access to complete the connection.",
+         "Tap Phone \u2192 Other device.",
+         "Tap the Smart View icon on your phone.",
+         "Tap Disconnect.",
+         "Check out our guide."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     },
+     {
+      "actionName": "Access Smart View with SmartThings",
+      "description": "It will fix view smartthings",
+      "stepGroups": [
+       {
+        "steps": [
+         "Tap Start now."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.62
+   },
+   "intent_signature": "other::main+screen+small+stays::trigger:none",
+   "domain": "other",
+   "variations": [
+    "My new smartphone's main screen stays small and doesn't fill the whole display; I can't make it expand to full size and I've never seen this before.",
+    "Main screen stays small on my device after the recent change; please advise.",
+    "hey my phone main screen stays small out of nowhere, any fix?",
+    "main screen stays small fix",
+    "this is so annoying, my phone main screen stays small and i cant do anything about it",
+    "deice mian screne stasy sall pls hapl",
+    "My device main screen stays small and I would like assistance resolving this.",
+    "my phone just main screen stays small, started this morning",
+    "main screen stays small",
+    "seriously why does my phone main screen stays small every single time, ive tried everything"
+   ],
+   "keywords": "main screen stays small",
+   "seed": "My new smartphone's main screen stays small and doesn't fill the whole display; I can't make it expand to full size and I've never seen this before.",
+   "provenance": [
+    {
+     "action": "Mirror Your TV with Smart View",
+     "resolution": "path=Smart View > TV from the list of Available devices > Start now, If prompted > Phone \u2192 Other device > Smart View icon on your phone > Disconnect; leaf='Disconnect'; polarity=enable; rel=0.682; factor=1.15; picked=DL-0357(open:available devices on share panel); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.7849,
+     "spans": [
+      {
+       "start": 3601,
+       "end": 3697,
+       "text": "Open the Quick settings panel by swiping down from the top right of your screen. Tap Smart View."
+      },
+      {
+       "start": 3601,
+       "end": 3697,
+       "text": "Open the Quick settings panel by swiping down from the top right of your screen. Tap Smart View."
+      },
+      {
+       "start": 3698,
+       "end": 3841,
+       "text": "Select your TV from the list of Available devices, and then tap Start now. If prompted, enter a PIN or allow access to complete the connection."
+      },
+      {
+       "start": 3698,
+       "end": 3841,
+       "text": "Select your TV from the list of Available devices, and then tap Start now. If prompted, enter a PIN or allow access to complete the connection."
+      },
+      {
+       "start": 3698,
+       "end": 3841,
+       "text": "Select your TV from the list of Available devices, and then tap Start now. If prompted, enter a PIN or allow access to complete the connection."
+      },
+      {
+       "start": 4072,
+       "end": 4298,
+       "text": "To switch back, tap Phone \u2192 Other device. When you are done using Smart View, tap the Smart View icon on your phone, and then tap Disconnect. If you need help editing the icons in the Quick settings panel, check out our guide."
+      },
+      {
+       "start": 4072,
+       "end": 4298,
+       "text": "To switch back, tap Phone \u2192 Other device. When you are done using Smart View, tap the Smart View icon on your phone, and then tap Disconnect. If you need help editing the icons in the Quick settings panel, check out our guide."
+      },
+      {
+       "start": 4072,
+       "end": 4298,
+       "text": "To switch back, tap Phone \u2192 Other device. When you are done using Smart View, tap the Smart View icon on your phone, and then tap Disconnect. If you need help editing the icons in the Quick settings panel, check out our guide."
+      },
+      {
+       "start": 4072,
+       "end": 4298,
+       "text": "To switch back, tap Phone \u2192 Other device. When you are done using Smart View, tap the Smart View icon on your phone, and then tap Disconnect. If you need help editing the icons in the Quick settings panel, check out our guide."
+      }
+     ]
+    },
+    {
+     "action": "Mirror Your Screen",
+     "resolution": "path=Wireless display or dock > TV once its name is displayed, If prompted > Allow on your TV; leaf='Allow on your TV'; polarity=enable; rel=0.681; factor=1.44; picked=DL-0199(enable:privacy display); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.9795,
+     "spans": [
+      {
+       "start": 5056,
+       "end": 5146,
+       "text": "Select Add device or Add Bluetooth or other device. Then, select Wireless display or dock."
+      },
+      {
+       "start": 5056,
+       "end": 5146,
+       "text": "Select Add device or Add Bluetooth or other device. Then, select Wireless display or dock."
+      },
+      {
+       "start": 5147,
+       "end": 5227,
+       "text": "Select your TV once its name is displayed. If prompted, select Allow on your TV."
+      },
+      {
+       "start": 5147,
+       "end": 5227,
+       "text": "Select your TV once its name is displayed. If prompted, select Allow on your TV."
+      }
+     ]
+    },
+    {
+     "action": "Disconnect the Devices",
+     "resolution": "path=Remove device > Yes; leaf='Yes'; polarity=none; rel=0.828; factor=1.00; picked=DL-0534(open:connected devices); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.8281,
+     "spans": [
+      {
+       "start": 5666,
+       "end": 5708,
+       "text": "Select Remove device, and then select Yes."
+      },
+      {
+       "start": 5666,
+       "end": 5708,
+       "text": "Select Remove device, and then select Yes."
+      }
+     ]
+    },
+    {
+     "action": "Access Smart View with SmartThings",
+     "resolution": "path=Start now; leaf='Start now'; polarity=none; rel=0.814; factor=1.00; picked=DL-0352(open:Now bar on Always On Display); declined (target overlap 0.25 vs needed 0.50) -> generic placeholder",
+     "confidence": 0.8145,
+     "spans": [
+      {
+       "start": 6185,
+       "end": 6331,
+       "text": "Tap Start now. Give your TV permission to access your device, if needed. Note: This feature may not be available on the PC version of SmartThings."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 4,
+    "n_resolved": 3,
+    "n_generic": 1,
+    "resolution_rate": 0.75,
+    "mean_target_overlap": 0.5,
+    "polarity_agreement": 1.0,
+    "n_polarity_considered": 1
+   },
+   "content_hash": "b9cdb2717dc780a7",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 4,
+     "auto_actions": 2,
+     "auto_with_deeplink": 2
+    }
+   }
+  },
+  {
+   "plan_id": "FG-60f59c3067",
+   "source_id": "row_9",
+   "source_title": "Access your smartphone's data if the screen does not respond",
+   "topic": "Nothing is visible on the screen",
+   "goal": {
+    "goal": "Follow these steps to perform this Nothing Visible Screen Troubleshooting",
+    "title": "Nothing visible screen",
+    "actions": [
+     {
+      "actionName": "Nothing Is Visible on the Screen",
+      "description": "It will fix visible screen",
+      "stepGroups": [
+       {
+        "steps": [
+         "Connect the adapter to your phone.",
+         "Connect the mouse's USB to the adapter.",
+         "Click your way through backing up your data with Data Transfer or other methods.",
+         "Connect the HDMI cable to the adapter, Next.",
+         "Connect the other end of the HDMI cable to the HDMI port on the TV or monitor.",
+         "Select the input that your phone is connected to, Once connected."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.5
+   },
+   "intent_signature": "display::network+touch::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My Nexa Fold X1 inner screen stopped working by itself; it shows no image and doesn't respond to touch, while the outer cover screen still works.",
+    "I am experiencing the following issue: touch.",
+    "hey my phone touch out of nowhere, any fix?",
+    "how to fix touch",
+    "seriously why does my phone touch every single time, ive tried everything",
+    "devie tuoch pls hlp",
+    "Touch on my device after the recent change; please advise.",
+    "my phone just touch, started this morning",
+    "touch",
+    "my phne toch and i cnt fiugr out wat to doo"
+   ],
+   "keywords": "touch",
+   "seed": "My Nexa Fold X1 inner screen stopped working by itself; it shows no image and doesn't respond to touch, while the outer cover screen still works.",
+   "provenance": [
+    {
+     "action": "Nothing Is Visible on the Screen",
+     "resolution": "path=n/a; leaf=''; polarity=none; rel=0.755; factor=1.00; picked=DL-0293(open:USB tethering); declined (target overlap 0.00 vs needed 0.50) -> generic placeholder",
+     "confidence": 0.7553,
+     "spans": [
+      {
+       "start": 551,
+       "end": 964,
+       "text": "Connect the adapter to your phone, and then connect the mouse's USB to the adapter. You can also connect a keyboard the same way, so you are able to easily enter your PIN or Password. However, the on-screen keyboard will be available to use with a mouse. Now that you're connected, a mouse pointer will appear on screen, and you can click your way through backing up your data with Data Transfer or other methods."
+      },
+      {
+       "start": 551,
+       "end": 964,
+       "text": "Connect the adapter to your phone, and then connect the mouse's USB to the adapter. You can also connect a keyboard the same way, so you are able to easily enter your PIN or Password. However, the on-screen keyboard will be available to use with a mouse. Now that you're connected, a mouse pointer will appear on screen, and you can click your way through backing up your data with Data Transfer or other methods."
+      },
+      {
+       "start": 551,
+       "end": 964,
+       "text": "Connect the adapter to your phone, and then connect the mouse's USB to the adapter. You can also connect a keyboard the same way, so you are able to easily enter your PIN or Password. However, the on-screen keyboard will be available to use with a mouse. Now that you're connected, a mouse pointer will appear on screen, and you can click your way through backing up your data with Data Transfer or other methods."
+      },
+      {
+       "start": 1879,
+       "end": 2436,
+       "text": "Connect the adapter to your phone, and then connect the HDMI cable to the adapter. Next, connect the other end of the HDMI cable to the HDMI port on the TV or monitor. Power on your TV or monitor, and then select the input that your phone is connected to. Once connected, you'll see your phone's screen on the large display. From here, you can mimic movements on your phone to back up your data with Data Transfer or other methods. Once you've backed up your data, please visit a TechCorp walk-in service center, or you can schedule a repair service online."
+      },
+      {
+       "start": 1879,
+       "end": 2436,
+       "text": "Connect the adapter to your phone, and then connect the HDMI cable to the adapter. Next, connect the other end of the HDMI cable to the HDMI port on the TV or monitor. Power on your TV or monitor, and then select the input that your phone is connected to. Once connected, you'll see your phone's screen on the large display. From here, you can mimic movements on your phone to back up your data with Data Transfer or other methods. Once you've backed up your data, please visit a TechCorp walk-in service center, or you can schedule a repair service online."
+      },
+      {
+       "start": 1879,
+       "end": 2436,
+       "text": "Connect the adapter to your phone, and then connect the HDMI cable to the adapter. Next, connect the other end of the HDMI cable to the HDMI port on the TV or monitor. Power on your TV or monitor, and then select the input that your phone is connected to. Once connected, you'll see your phone's screen on the large display. From here, you can mimic movements on your phone to back up your data with Data Transfer or other methods. Once you've backed up your data, please visit a TechCorp walk-in service center, or you can schedule a repair service online."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 1,
+    "n_resolved": 0,
+    "n_generic": 1,
+    "resolution_rate": 0.0,
+    "mean_target_overlap": 0.0,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "658deba88e242828",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 1,
+     "auto_actions": 0,
+     "auto_with_deeplink": 0
+    }
+   }
+  },
+  {
+   "plan_id": "FG-0b57510d0f",
+   "source_id": "row_12",
+   "source_title": "Use Multi window and App pairs on your smartphone or tablet",
+   "topic": "Use Multi window and App pairs on your smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Use Multi Window Troubleshooting",
+    "title": "Use multi window",
+    "actions": [
+     {
+      "actionName": "Swipe Gestures for Multi Window",
+      "description": "It will open multi window",
+      "stepGroups": [
+       {
+        "steps": [
+         "Navigate to.",
+         "Open Settings.",
+         "Tap Advanced features.",
+         "Tap Multi window.",
+         "Tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode.",
+         "Drag the pop-up to the side of the screen to hide it.",
+         "Tap it again to bring it back to the center of the screen.",
+         "Tap the top of the pop-up window to use additional options.",
+         "Drag."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/825fc8b84c",
+         "key": "Swipe for pop-up view",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/7832861927",
+         "description": "Enables swipe for pop-up view via device Settings on the device.",
+         "message": "Enable Swipe for pop-up view",
+         "classes": null,
+         "originalType": "onURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Exit Multi Window",
+      "description": "It will fix multi window",
+      "stepGroups": [
+       {
+        "steps": [
+         "Tap the Home icon."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/e2aefc4571",
+         "key": "Show multi window menu with 1 window",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/bd9ead5bed",
+         "description": "Enables multi window menu via device Settings on the device.",
+         "message": "Enable Show multi window menu with 1 window",
+         "classes": null,
+         "originalType": "onURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Create an App Pair - Desired App",
+      "description": "It will let you fix app",
+      "stepGroups": [
+       {
+        "steps": [
+         "Swipe left to open the Quick Access panel.",
+         "Touch and hold your desired app.",
+         "Drag."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/36a903f6ee",
+         "key": "App notifications",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/0426564a72",
+         "description": "Opens the app notifications settings page in device Settings on the device.",
+         "message": "View Notification Settings",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Create an App Pair - Two Arrows to Swap",
+      "description": "It will fix arrows swap",
+      "stepGroups": [
+       {
+        "steps": [
+         "Open the Quick Access panel again.",
+         "Tap the dotted divider between the two windows to change the orientation, create an App pair:",
+         "Tap the two arrows to swap the apps' positions.",
+         "Tap the Add to app pair icon (it may have a plus sign or a star) to create an App pair."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.62
+   },
+   "intent_signature": "software::app::trigger:app",
+   "domain": "software",
+   "variations": [
+    "My Nexa X1 has a floating circle that constantly hovers on my screen and gives me quick shortcuts to recent apps, home, back, screen off, volume control, and more; I want to remove it.",
+    "I am experiencing the following issue: app.",
+    "my phone just app, started this morning",
+    "app",
+    "this is so annoying, my phone app and i cant do anything about it",
+    "devie app pls hap",
+    "App on my device after the recent change; please advise.",
+    "hey my phone app out of nowhere, any fix?",
+    "how to fix app",
+    "dveice app pls hlap"
+   ],
+   "keywords": "app",
+   "seed": "My Nexa X1 has a floating circle that constantly hovers on my screen and gives me quick shortcuts to recent apps, home, back, screen off, volume control, and more; I want to remove it.",
+   "provenance": [
+    {
+     "action": "Swipe Gestures for Multi Window",
+     "resolution": "path=Settings > Advanced features > Multi window > it again to bring it back to the center of the > top of the pop-up window to use additional; leaf='top of the pop-up window to use additional'; polarity=none; rel=0.880; factor=1.03; picked=DL-0268(enable:swipe for pop-up view); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.9108,
+     "spans": [
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 3491,
+       "end": 4180,
+       "text": "Navigate to and open Settings, and then tap Advanced features. Tap Multi window, and then tap the switches next to Swipe for split screen or Swipe for pop-up view.Once you've turned on these features, a two finger swipe from the bottom of the screen will move the current app into split screen mode. You can also use one finger to swipe in from either top corner to put the current app into a pop-up. You can drag the pop-up to the side of the screen to hide it, and then tap it again to bring it back to the center of the screen. Tap the top of the pop-up window to use additional options. Please see the \"Use pop-up view\" section for details. There are multiple ways to use Multi window:"
+      },
+      {
+       "start": 4181,
+       "end": 4442,
+       "text": "Drag and drop apps from the Taskbar Drag and drop apps from the Quick Access panel Select apps from the Recents menu Drag and drop a URL or hyperlink Drag and drop apps from your notifications Use two-finger swipe gestures from the bottom or sides of the screen"
+      }
+     ]
+    },
+    {
+     "action": "Exit Multi Window",
+     "resolution": "path=Home icon; leaf='Home icon'; polarity=none; rel=0.765; factor=1.22; picked=DL-0247(enable:multi window menu); accepted (target overlap 0.67 vs needed 0.50)",
+     "confidence": 0.9296,
+     "spans": [
+      {
+       "start": 4566,
+       "end": 4683,
+       "text": "To do this, tap the Home icon. This will close them completely on the Home screen but leave them together in Recents."
+      }
+     ]
+    },
+    {
+     "action": "Create an App Pair - Desired App",
+     "resolution": "path=desired app; leaf='desired app'; polarity=none; rel=0.779; factor=1.15; picked=DL-0481(open:app notifications); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.8962,
+     "spans": [
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      }
+     ]
+    },
+    {
+     "action": "Create an App Pair - Two Arrows to Swap",
+     "resolution": "path=Quick Access panel again > two arrows to swap the apps' positions; leaf='two arrows to swap the apps' positions'; polarity=none; rel=0.823; factor=1.00; picked=DL-0383(open:emoji pair sticker suggestions); declined (target overlap 0.25 vs needed 0.50) -> generic placeholder",
+     "confidence": 0.8232,
+     "spans": [
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6243,
+       "end": 6375,
+       "text": "Swipe left to open the Quick Access panel. Touch and hold your desired app, and drag and drop it into the top portion of the screen."
+      },
+      {
+       "start": 6376,
+       "end": 6485,
+       "text": "Open the Quick Access panel again, and then drag and drop a second app into the bottom portion of the screen."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 4,
+    "n_resolved": 3,
+    "n_generic": 1,
+    "resolution_rate": 0.75,
+    "mean_target_overlap": 0.5556,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "ffe03a2c98718999",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 4,
+     "auto_actions": 3,
+     "auto_with_deeplink": 3
+    }
+   }
+  },
+  {
+   "plan_id": "FG-14e2b38b09",
+   "source_id": "row_13",
+   "source_title": "Blank or black display on a smartphone or tablet",
+   "topic": "Blank or black display on a smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Blank Black Display Troubleshooting",
+    "title": "Blank black display",
+    "actions": [
+     {
+      "actionName": "Force a Restart",
+      "description": "It will let you fix restart",
+      "stepGroups": [
+       {
+        "steps": [
+         "Press and hold both the Power button (or Side button)."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/017e21ffd9",
+         "key": "Side button",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/fbc14cbc74",
+         "description": "Opens the Side button settings settings page in device Settings on the device.",
+         "message": "View Side button",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Check for Physical Damage and Liquid Exposure",
+      "description": "It will check liquid exposure",
+      "stepGroups": [
+       {
+        "steps": [
+         "Remove any cases or accessories that might be covering the charging port or buttons.",
+         "Turn off your phone or tablet."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.54
+   },
+   "intent_signature": "display::blank::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My Nexa X1 screen stays blank and doesn't show any activation message or anything else when I turn it on after the carrier deactivated the old phone.",
+    "My device blank and I would like assistance resolving this.",
+    "so my phone keeps blank and its driving me crazy",
+    "how to fix blank",
+    "this is so annoying, my phone blank and i cant do anything about it",
+    "devce blnak pls hlp",
+    "Blank on my device after the recent change; please advise.",
+    "seriously why does my phone blank every single time, ive tried everything",
+    "devce balnk pls hap",
+    "I am experiencing the following issue: blank."
+   ],
+   "keywords": "blank",
+   "seed": "My Nexa X1 screen stays blank and doesn't show any activation message or anything else when I turn it on after the carrier deactivated the old phone.",
+   "provenance": [
+    {
+     "action": "Check for Physical Damage and Liquid Exposure",
+     "resolution": "path=phone or tablet; leaf='phone or tablet'; polarity=disable; rel=0.830; factor=1.25; picked=DL-0090(disable:double tap to turn off screen); declined (target overlap 0.00 vs needed 0.50) -> generic placeholder",
+     "confidence": 1.0381,
+     "spans": [
+      {
+       "start": 546,
+       "end": 918,
+       "text": "Please remove any cases or accessories that might be covering the charging port or buttons. Examine the USB connections for any corrosion or bent pins. The USB connection should feel secure with minimal movement. Next, let's check the Liquid Damage Indicator (LDI). The LDI should normally appear solid white, or white with pink or purple X's. Here's how to check the LDI:"
+      },
+      {
+       "start": 919,
+       "end": 1087,
+       "text": "Turn off your phone or tablet. Insert the ejector tool into the small hole next to the SIM/MicroSD tray to eject the tray. Shine a flashlight into the SIM/MicroSD slot."
+      }
+     ]
+    },
+    {
+     "action": "Force a Restart",
+     "resolution": "path=and hold both the Power button (or Side button); leaf='and hold both the Power button (or Side button)'; polarity=none; rel=0.852; factor=1.35; picked=DL-0510(open:Side button); accepted (target overlap 1.00 vs needed 0.50)",
+     "confidence": 1.1506,
+     "spans": [
+      {
+       "start": 1533,
+       "end": 1653,
+       "text": "Press and hold both the Power button (or Side button) and the Volume down button simultaneously for at least 20 seconds."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 2,
+    "n_resolved": 1,
+    "n_generic": 1,
+    "resolution_rate": 0.5,
+    "mean_target_overlap": 1.0,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "8219867106c1755b",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 2,
+     "auto_actions": 1,
+     "auto_with_deeplink": 1
+    }
+   }
+  },
+  {
+   "plan_id": "FG-2cc7371464",
+   "source_id": "row_15",
+   "source_title": "Blank or black display on a smartphone or tablet",
+   "topic": "Blank or black display on a smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Blank Black Display Troubleshooting",
+    "title": "Blank black display",
+    "actions": [
+     {
+      "actionName": "Force a Restart",
+      "description": "It will let you fix restart",
+      "stepGroups": [
+       {
+        "steps": [
+         "Press and hold both the Power button (or Side button)."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/017e21ffd9",
+         "key": "Side button",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/fbc14cbc74",
+         "description": "Opens the Side button settings settings page in device Settings on the device.",
+         "message": "View Side button",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Check for Physical Damage and Liquid Exposure",
+      "description": "It will check liquid exposure",
+      "stepGroups": [
+       {
+        "steps": [
+         "Remove any cases or accessories that might be covering the charging port or buttons.",
+         "Turn off your phone or tablet."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.54
+   },
+   "intent_signature": "display::blank::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My Nexa X1 Ultra only shows a blue (or black) screen with tiny text when I try to turn it on, and it won't start up. I tried holding the power button but it doesn't help.",
+    "I am experiencing the following issue: blank.",
+    "my phone just blank, started this morning",
+    "how to fix blank",
+    "seriously why does my phone blank every single time, ive tried everything",
+    "my phoe balnk and i cnat figru out wat to doo",
+    "My device blank and I would like assistance resolving this.",
+    "so my phone keeps blank and its driving me crazy",
+    "my phne blak and i cnt figru out wat to doo",
+    "deice balnk pls hapl"
+   ],
+   "keywords": "blank",
+   "seed": "My Nexa X1 Ultra only shows a blue (or black) screen with tiny text when I try to turn it on, and it won't start up. I tried holding the power button but it doesn't help.",
+   "provenance": [
+    {
+     "action": "Check for Physical Damage and Liquid Exposure",
+     "resolution": "path=phone or tablet; leaf='phone or tablet'; polarity=disable; rel=0.830; factor=1.25; picked=DL-0090(disable:double tap to turn off screen); declined (target overlap 0.00 vs needed 0.50) -> generic placeholder",
+     "confidence": 1.0381,
+     "spans": [
+      {
+       "start": 546,
+       "end": 918,
+       "text": "Please remove any cases or accessories that might be covering the charging port or buttons. Examine the USB connections for any corrosion or bent pins. The USB connection should feel secure with minimal movement. Next, let's check the Liquid Damage Indicator (LDI). The LDI should normally appear solid white, or white with pink or purple X's. Here's how to check the LDI:"
+      },
+      {
+       "start": 919,
+       "end": 1087,
+       "text": "Turn off your phone or tablet. Insert the ejector tool into the small hole next to the SIM/MicroSD tray to eject the tray. Shine a flashlight into the SIM/MicroSD slot."
+      }
+     ]
+    },
+    {
+     "action": "Force a Restart",
+     "resolution": "path=and hold both the Power button (or Side button); leaf='and hold both the Power button (or Side button)'; polarity=none; rel=0.852; factor=1.35; picked=DL-0510(open:Side button); accepted (target overlap 1.00 vs needed 0.50)",
+     "confidence": 1.1506,
+     "spans": [
+      {
+       "start": 1533,
+       "end": 1653,
+       "text": "Press and hold both the Power button (or Side button) and the Volume down button simultaneously for at least 20 seconds."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 2,
+    "n_resolved": 1,
+    "n_generic": 1,
+    "resolution_rate": 0.5,
+    "mean_target_overlap": 1.0,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "8219867106c1755b",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 2,
+     "auto_actions": 1,
+     "auto_with_deeplink": 1
+    }
+   }
+  },
+  {
+   "plan_id": "FG-476b032b52",
+   "source_id": "row_16",
+   "source_title": "Blank or black display on a smartphone or tablet",
+   "topic": "Blank or black display on a smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Blank Black Display Troubleshooting",
+    "title": "Blank black display",
+    "actions": [
+     {
+      "actionName": "Force a Restart",
+      "description": "It will let you fix restart",
+      "stepGroups": [
+       {
+        "steps": [
+         "Press and hold both the Power button (or Side button)."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/017e21ffd9",
+         "key": "Side button",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/fbc14cbc74",
+         "description": "Opens the Side button settings settings page in device Settings on the device.",
+         "message": "View Side button",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Check for Physical Damage and Liquid Exposure",
+      "description": "It will check liquid exposure",
+      "stepGroups": [
+       {
+        "steps": [
+         "Remove any cases or accessories that might be covering the charging port or buttons.",
+         "Turn off your phone or tablet."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.54
+   },
+   "intent_signature": "display::blank+charge+flicker::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My TechCorp X1 Ultra screen flashes extremely quickly (in milliseconds) whenever I plug in a charger, making the display unusable for a short period.",
+    "My device flicker charge and I would like assistance resolving this.",
+    "my phone just flicker charge, started this morning",
+    "flicker charge fix",
+    "this is so annoying, my phone flicker charge and i cant do anything about it",
+    "my phoen flciker chagre and i cnt figru out wat to doo",
+    "I am experiencing the following issue: flicker charge.",
+    "how to fix flicker charge",
+    "my phnoe flickre chrge and i catn fiur out wat to doo",
+    "Flicker charge on my device after the recent change; please advise."
+   ],
+   "keywords": "flicker charge",
+   "seed": "My TechCorp X1 Ultra screen flashes extremely quickly (in milliseconds) whenever I plug in a charger, making the display unusable for a short period.",
+   "provenance": [
+    {
+     "action": "Check for Physical Damage and Liquid Exposure",
+     "resolution": "path=phone or tablet; leaf='phone or tablet'; polarity=disable; rel=0.830; factor=1.25; picked=DL-0090(disable:double tap to turn off screen); declined (target overlap 0.00 vs needed 0.50) -> generic placeholder",
+     "confidence": 1.0381,
+     "spans": [
+      {
+       "start": 546,
+       "end": 918,
+       "text": "Please remove any cases or accessories that might be covering the charging port or buttons. Examine the USB connections for any corrosion or bent pins. The USB connection should feel secure with minimal movement. Next, let's check the Liquid Damage Indicator (LDI). The LDI should normally appear solid white, or white with pink or purple X's. Here's how to check the LDI:"
+      },
+      {
+       "start": 919,
+       "end": 1087,
+       "text": "Turn off your phone or tablet. Insert the ejector tool into the small hole next to the SIM/MicroSD tray to eject the tray. Shine a flashlight into the SIM/MicroSD slot."
+      }
+     ]
+    },
+    {
+     "action": "Force a Restart",
+     "resolution": "path=and hold both the Power button (or Side button); leaf='and hold both the Power button (or Side button)'; polarity=none; rel=0.852; factor=1.35; picked=DL-0510(open:Side button); accepted (target overlap 1.00 vs needed 0.50)",
+     "confidence": 1.1506,
+     "spans": [
+      {
+       "start": 1533,
+       "end": 1653,
+       "text": "Press and hold both the Power button (or Side button) and the Volume down button simultaneously for at least 20 seconds."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 2,
+    "n_resolved": 1,
+    "n_generic": 1,
+    "resolution_rate": 0.5,
+    "mean_target_overlap": 1.0,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "8219867106c1755b",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 2,
+     "auto_actions": 1,
+     "auto_with_deeplink": 1
+    }
+   }
+  },
+  {
+   "plan_id": "FG-e5ce6047e6",
+   "source_id": "row_20",
+   "source_title": "Screen does not rotate on smartphone or tablet",
+   "topic": "Screen does not rotate on smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Screen Rotate Troubleshooting",
+    "title": "Screen rotate",
+    "actions": [
+     {
+      "actionName": "5. Test App Rotation",
+      "description": "It will fix app rotation",
+      "stepGroups": [
+       {
+        "steps": [
+         "Open an app."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/36a903f6ee",
+         "key": "App notifications",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/0426564a72",
+         "description": "Opens the app notifications settings page in device Settings on the device.",
+         "message": "View Notification Settings",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     }
+    ],
+    "score": 0.59
+   },
+   "intent_signature": "display::distort::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My Nexa A14 screen looks distorted right after I received the phone, and I need a diagnostic test.",
+    "I am experiencing the following issue: distort.",
+    "my phone just distort, started this morning",
+    "distort",
+    "this is so annoying, my phone distort and i cant do anything about it",
+    "my phne dstort and i cnt fiugr out wat to doo",
+    "Distort on my device after the recent change; please advise.",
+    "so my phone keeps distort and its driving me crazy",
+    "seriously why does my phone distort every single time, ive tried everything",
+    "my phne distrot and i cat figru out wat to doo"
+   ],
+   "keywords": "distort",
+   "seed": "My Nexa A14 screen looks distorted right after I received the phone, and I need a diagnostic test.",
+   "provenance": [
+    {
+     "action": "5. Test App Rotation",
+     "resolution": "path=an app; leaf='an app'; polarity=none; rel=0.828; factor=1.15; picked=DL-0481(open:app notifications); accepted (target overlap 0.50 vs needed 0.50)",
+     "confidence": 0.9524,
+     "spans": [
+      {
+       "start": 1939,
+       "end": 2121,
+       "text": "Open an app and try rotating your screen by turning your device sideways. Please avoid touching the screen while rotating the device, as this can interfere with the rotation process."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 1,
+    "n_resolved": 1,
+    "n_generic": 0,
+    "resolution_rate": 1.0,
+    "mean_target_overlap": 0.5,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "160daaf75d56015e",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 1,
+     "auto_actions": 1,
+     "auto_with_deeplink": 1
+    }
+   }
+  },
+  {
+   "plan_id": "FG-05bcc38997",
+   "source_id": "row_21",
+   "source_title": "Touchscreen issues on a smartphone or tablet",
+   "topic": "Touchscreen issues on a smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Touchscreen Touchscreen Troubleshooting",
+    "title": "Touchscreen touchscreen",
+    "actions": [
+     {
+      "actionName": "5. Touch Sensitivity Setting",
+      "description": "It will fix sensitivity setting",
+      "stepGroups": [
+       {
+        "steps": [
+         "Navigate to Settings.",
+         "Tap Display.",
+         "Tap the switch next to Touch sensitivity to disable it."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/6451858b28",
+         "key": "Touch sensitivity",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "False"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/1b0d34e9b4",
+         "description": "Disables touch sensitivity via device Settings on the device.",
+         "message": "Disable Touch sensitivity",
+         "classes": null,
+         "originalType": "offURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "8. Factory Data Reset - Perform a Factory Data Reset",
+      "description": "It will fix data reset",
+      "stepGroups": [
+       {
+        "steps": [
+         "Navigate to.",
+         "Open Settings.",
+         "Tap General management.",
+         "Tap Reset.",
+         "Tap Factory data reset.",
+         "Swipe to.",
+         "Tap Delete all.",
+         "Reset."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/8e8eb09d57",
+         "key": "Auto factory reset",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/635e6add5d",
+         "description": "Opens the auto factory reset settings page in device Settings on the device.",
+         "message": "View Reset Options",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "7. Safe Mode",
+      "description": "It will fix safe mode",
+      "stepGroups": [
+       {
+        "steps": [
+         "Press and hold the Power button (or Side button).",
+         "Tap the Power icon.",
+         "Touch and hold power off.",
+         "Tap safe mode, Once in safe mode.",
+         "Restart your phone or tablet."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/251aba26dd",
+         "key": "Power saving",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/7bebf18037",
+         "description": "Opens the power saving mode settings page in device Settings on the device.",
+         "message": "Check Battery Performance",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "critical"
+     }
+    ],
+    "score": 0.67
+   },
+   "intent_signature": "display::touch+touch_lag::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My Nexa X1 screen inputs are delayed and the touch responsiveness is laggy, causing a noticeable delay when I try to interact with the phone.",
+    "I am experiencing the following issue: touch_lag touch.",
+    "hey my phone touch_lag touch out of nowhere, any fix?",
+    "touch_lag touch",
+    "seriously why does my phone touch_lag touch every single time, ive tried everything",
+    "deice touch_lga touhc pls hap",
+    "Touch_lag touch on my device after the recent change; please advise.",
+    "my phnoe touch_alg touh and i catn fgiur out wat to doo",
+    "so my phone keeps touch_lag touch and its driving me crazy",
+    "touch_lag touch fix"
+   ],
+   "keywords": "touch_lag touch",
+   "seed": "My Nexa X1 screen inputs are delayed and the touch responsiveness is laggy, causing a noticeable delay when I try to interact with the phone.",
+   "provenance": [
+    {
+     "action": "5. Touch Sensitivity Setting",
+     "resolution": "path=Settings > Display > switch next to Touch sensitivity to disable it; leaf='switch next to Touch sensitivity to disable it'; polarity=disable; rel=0.898; factor=1.69; picked=DL-0125(disable:touch sensitivity); accepted (target overlap 1.00 vs needed 0.50)",
+     "confidence": 1.515,
+     "spans": [
+      {
+       "start": 3197,
+       "end": 3471,
+       "text": "If the Touch sensitivity setting is enabled when you are not using a protective film, the touchscreen might become overly sensitive and malfunction. To turn off this feature, navigate to Settings, tap Display, and then tap the switch next to Touch sensitivity to disable it."
+      },
+      {
+       "start": 3197,
+       "end": 3471,
+       "text": "If the Touch sensitivity setting is enabled when you are not using a protective film, the touchscreen might become overly sensitive and malfunction. To turn off this feature, navigate to Settings, tap Display, and then tap the switch next to Touch sensitivity to disable it."
+      },
+      {
+       "start": 3197,
+       "end": 3471,
+       "text": "If the Touch sensitivity setting is enabled when you are not using a protective film, the touchscreen might become overly sensitive and malfunction. To turn off this feature, navigate to Settings, tap Display, and then tap the switch next to Touch sensitivity to disable it."
+      }
+     ]
+    },
+    {
+     "action": "7. Safe Mode",
+     "resolution": "path=and hold the Power button (or Side button) > Power icon > power off > safe mode, Once in safe mode; leaf='safe mode, Once in safe mode'; polarity=none; rel=0.832; factor=1.15; picked=DL-0519(open:power saving mode); accepted (target overlap 0.67 vs needed 0.50)",
+     "confidence": 0.9562,
+     "spans": [
+      {
+       "start": 3826,
+       "end": 3919,
+       "text": "Press and hold the Power button (or Side button) and the Volume down button at the same time."
+      },
+      {
+       "start": 3920,
+       "end": 4013,
+       "text": "Alternatively, swipe down from the top of the screen with two fingers and tap the Power icon."
+      },
+      {
+       "start": 4014,
+       "end": 4279,
+       "text": "Touch and hold Power off, then tap Safe mode. Once in Safe mode, you can try removing any third-party apps that were recently updated or installed around the time the issue began. To exit Safe mode, simply restart your phone or tablet, and it will boot up normally."
+      },
+      {
+       "start": 4014,
+       "end": 4279,
+       "text": "Touch and hold Power off, then tap Safe mode. Once in Safe mode, you can try removing any third-party apps that were recently updated or installed around the time the issue began. To exit Safe mode, simply restart your phone or tablet, and it will boot up normally."
+      },
+      {
+       "start": 4014,
+       "end": 4279,
+       "text": "Touch and hold Power off, then tap Safe mode. Once in Safe mode, you can try removing any third-party apps that were recently updated or installed around the time the issue began. To exit Safe mode, simply restart your phone or tablet, and it will boot up normally."
+      }
+     ]
+    },
+    {
+     "action": "8. Factory Data Reset - Perform a Factory Data Reset",
+     "resolution": "path=Settings > General management > Reset > Factory data reset > Delete all; leaf='Delete all'; polarity=none; rel=0.854; factor=1.35; picked=DL-0022(open:auto factory reset); accepted (target overlap 0.67 vs needed 0.50)",
+     "confidence": 1.153,
+     "spans": [
+      {
+       "start": 4606,
+       "end": 4636,
+       "text": "Navigate to and open Settings."
+      },
+      {
+       "start": 4606,
+       "end": 4636,
+       "text": "Navigate to and open Settings."
+      },
+      {
+       "start": 4637,
+       "end": 4660,
+       "text": "Tap General management."
+      },
+      {
+       "start": 4661,
+       "end": 4671,
+       "text": "Tap Reset."
+      },
+      {
+       "start": 4672,
+       "end": 4695,
+       "text": "Tap Factory data reset."
+      },
+      {
+       "start": 4696,
+       "end": 4719,
+       "text": "Swipe to and tap Reset."
+      },
+      {
+       "start": 4720,
+       "end": 4903,
+       "text": "Tap Delete all. You will need to enter your TechCorp account credentials to complete the reset. Your device will then reset, and you will need to go through the initial setup process."
+      },
+      {
+       "start": 4720,
+       "end": 4903,
+       "text": "Tap Delete all. You will need to enter your TechCorp account credentials to complete the reset. Your device will then reset, and you will need to go through the initial setup process."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 3,
+    "n_resolved": 3,
+    "n_generic": 0,
+    "resolution_rate": 1.0,
+    "mean_target_overlap": 0.7778,
+    "polarity_agreement": 1.0,
+    "n_polarity_considered": 1
+   },
+   "content_hash": "bc830f91b999dd8c",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 3,
+     "auto_actions": 2,
+     "auto_with_deeplink": 2
+    }
+   }
+  },
+  {
+   "plan_id": "FG-f377466b4d",
+   "source_id": "row_22",
+   "source_title": "Blank or black display on a smartphone or tablet",
+   "topic": "Blank or black display on a smartphone or tablet",
+   "goal": {
+    "goal": "Follow these steps to perform this Blank Black Display Troubleshooting",
+    "title": "Blank black display",
+    "actions": [
+     {
+      "actionName": "Force a Restart",
+      "description": "It will let you fix restart",
+      "stepGroups": [
+       {
+        "steps": [
+         "Press and hold both the Power button (or Side button)."
+        ],
+        "validationDeeplink": {
+         "deeplink": "voiceassist://masked/val/017e21ffd9",
+         "key": "Side button",
+         "resultType": "boolean",
+         "condition": "equal",
+         "value": "True"
+        },
+        "actionableDeeplink": {
+         "deeplink": "voiceassist://masked/act/fbc14cbc74",
+         "description": "Opens the Side button settings settings page in device Settings on the device.",
+         "message": "View Side button",
+         "classes": null,
+         "originalType": "onClickURL"
+        }
+       }
+      ],
+      "category": "auto"
+     },
+     {
+      "actionName": "Check for Physical Damage and Liquid Exposure",
+      "description": "It will check liquid exposure",
+      "stepGroups": [
+       {
+        "steps": [
+         "Remove any cases or accessories that might be covering the charging port or buttons.",
+         "Turn off your phone or tablet."
+        ],
+        "validationDeeplink": null,
+        "actionableDeeplink": null
+       }
+      ],
+      "category": "manual"
+     }
+    ],
+    "score": 0.54
+   },
+   "intent_signature": "display::blank::trigger:none",
+   "domain": "display",
+   "variations": [
+    "My Nexa X1 Ultra screen is completely black and won't turn on, even though the phone powers on, rings, and otherwise works; there is no physical damage.",
+    "Blank on my device after the recent change; please advise.",
+    "hey my phone blank out of nowhere, any fix?",
+    "blank fix",
+    "seriously why does my phone blank every single time, ive tried everything",
+    "my pone blnak and i cnat fgur out wat to doo",
+    "how to fix blank",
+    "this is so annoying, my phone blank and i cant do anything about it",
+    "devce blnak pls hapl",
+    "I am experiencing the following issue: blank."
+   ],
+   "keywords": "blank",
+   "seed": "My Nexa X1 Ultra screen is completely black and won't turn on, even though the phone powers on, rings, and otherwise works; there is no physical damage.",
+   "provenance": [
+    {
+     "action": "Check for Physical Damage and Liquid Exposure",
+     "resolution": "path=phone or tablet; leaf='phone or tablet'; polarity=disable; rel=0.830; factor=1.25; picked=DL-0090(disable:double tap to turn off screen); declined (target overlap 0.00 vs needed 0.50) -> generic placeholder",
+     "confidence": 1.0381,
+     "spans": [
+      {
+       "start": 546,
+       "end": 918,
+       "text": "Please remove any cases or accessories that might be covering the charging port or buttons. Examine the USB connections for any corrosion or bent pins. The USB connection should feel secure with minimal movement. Next, let's check the Liquid Damage Indicator (LDI). The LDI should normally appear solid white, or white with pink or purple X's. Here's how to check the LDI:"
+      },
+      {
+       "start": 919,
+       "end": 1087,
+       "text": "Turn off your phone or tablet. Insert the ejector tool into the small hole next to the SIM/MicroSD tray to eject the tray. Shine a flashlight into the SIM/MicroSD slot."
+      }
+     ]
+    },
+    {
+     "action": "Force a Restart",
+     "resolution": "path=and hold both the Power button (or Side button); leaf='and hold both the Power button (or Side button)'; polarity=none; rel=0.852; factor=1.35; picked=DL-0510(open:Side button); accepted (target overlap 1.00 vs needed 0.50)",
+     "confidence": 1.1506,
+     "spans": [
+      {
+       "start": 1533,
+       "end": 1653,
+       "text": "Press and hold both the Power button (or Side button) and the Volume down button simultaneously for at least 20 seconds."
+      }
+     ]
+    }
+   ],
+   "build": {
+    "n_actions": 2,
+    "n_resolved": 1,
+    "n_generic": 1,
+    "resolution_rate": 0.5,
+    "mean_target_overlap": 1.0,
+    "polarity_agreement": null,
+    "n_polarity_considered": 0
+   },
+   "content_hash": "8219867106c1755b",
+   "gate": {
+    "ok": true,
+    "failures": [],
+    "checks": {
+     "goal": 1,
+     "action": 2,
+     "auto_actions": 1,
+     "auto_with_deeplink": 1
+    }
+   }
+  }
+ ],
+ "source_hashes": {
+  "siis_responses.json": "f702cfe0b21ad669fd8271fa19993b2a6dd16f25"
+ },
+ "stats": {
+  "n_sources": 20,
+  "n_plans": 14,
+  "n_actions": 36,
+  "n_resolved": 23,
+  "deeplink_resolution_rate": 0.6389,
+  "n_rejected": 6,
+  "build_host": "Linux 7.2.8-1-cachyos / py3.12.13"
+ }
+}

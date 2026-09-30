@@ -1,0 +1,35 @@
+{
+  "query": "screen flickers",
+  "response": {
+    "query": "screen flickers",
+    "query_variations": [
+      "screen flickers",
+      "I am experiencing the following issue: flicker.",
+      "my phone just flicker, started this morning",
+      "how to fix flicker",
+      "seriously why does my phone flicker every single time, ive tried everything",
+      "my phne fliker and i catn fiur out wat to doo",
+      "Flicker on my device after the recent change; please advise.",
+      "so my phone keeps flicker and its driving me crazy",
+      "this is so annoying, my phone flicker and i cant do anything about it",
+      "dveice flickre pls hapl"
+    ],
+    "response": {
+      "contexts": [],
+      "fallback": "no_match"
+    },
+    "meta": {
+      "latency_ms": 5,
+      "cache_hit": false,
+      "model": "none(rules)",
+      "cost_usd": 0.0,
+      "plan_ids": [],
+      "atlas_version": "current",
+      "stage": "serve",
+      "cache_tier": "miss",
+      "margin": 0.0347,
+      "tokens_in": 0,
+      "tokens_out": 0
+    }
+  }
+}

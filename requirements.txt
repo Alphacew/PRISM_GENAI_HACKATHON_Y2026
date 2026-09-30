@@ -1,0 +1,14 @@
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2.6
+numpy>=1.26
+orjson>=3.9
+pillow>=10.0
+matplotlib>=3.8
+python-pptx>=1.0
+rank-bm25>=0.2.2
+# optional: enable the static-embedding encoder in forge/nlp.py
+# model2vec>=0.3
+
+# dev
+pytest>=8.0
